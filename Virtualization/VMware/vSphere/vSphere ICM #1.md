@@ -1,3 +1,3 @@
 # vSphere 7.0 ICM
 
-test
+testgit config --global credential.helper store
