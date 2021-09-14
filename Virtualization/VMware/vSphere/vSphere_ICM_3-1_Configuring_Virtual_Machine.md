@@ -1,9 +1,10 @@
 # [vSphere] Configuring Virtual Machines
 
 > vSphere Install, Configure, Manage [V7] Lecture Note
+
 > Module 3. Virtual Machines
 
-이번 장은 VM 생성, 프로비저닝, 삭제 등에 관한 내용을 다루는데, 주로 실습 위주라서 용어 위주로만 정리
+이번 장은 VM 생성, 프로비저닝, 삭제 등에 관한 내용을 다루는데, 주로 실습 위주라서 필요한 것만 정리
 
 ## 가상 머신 프로비저닝 방법
 - VMware Host Client 에서 생성
