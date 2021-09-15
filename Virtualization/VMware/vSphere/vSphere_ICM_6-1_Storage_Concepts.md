@@ -32,13 +32,13 @@ VMFS를 VM을 저장하는 데 최적화된 고성능 파일 시스템 형식이
 
 ## NFS (Network File System)
 
-![](../../../.gitbook/assets/2021-09-14-15-20-48.png)
+![](images/2021-09-15-22-15-51.png)
 
 NFS는 파일 레벨의 네트워크 파일 시스템이다. ESXi에 내장된 NFS 클라이언트는 TCP/IP를 통해 NFS 프로토콜을 사용하여 NAS 서버에 있는 지정된 NFS 볼륨에 액세스한다.
 
 ## vSAN (HCI; Hyper Converged Infrastructure)
 
-![](../../../.gitbook/assets/2021-09-14-15-22-35.png)
+![](images/2021-09-15-22-15-23.png)
 
 vSAN이란 물리 스토리지를 소프트웨어 기반 스토리지로 구성하는 VMware의 기술이다. 기존 외부 스토리지를 사용하지 않는 가상 환경을 위한 소프트웨어 기반 스토리지를 말한다.
 
@@ -52,6 +52,7 @@ vSAN을 구성하기 위해서는 서버당 최대 5개의 디스크 그룹이 �
 - 용량(capacity) 계층: 데이터를 저장하기 위한 용도. SSD 또는 HDD 디스크 필요. 디스크 그룹당 최대 7개 구성 가능
 
 ### vSAN Type
+
 - Hybrid type
     - 구성: 캐시 계층 (SSD) + 용량 계층 (HDD)
     - 동작: 캐시 계층이 read/write 동작을 모두 수행   
