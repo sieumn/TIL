@@ -1,9 +1,5 @@
 # Table of contents
 
-### Summary
-
-* [READ ME](README.md)
-
 ### TIL
 
 * [Daily TIL](DailyTIL/README.md)
