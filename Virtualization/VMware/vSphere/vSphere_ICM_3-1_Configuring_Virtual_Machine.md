@@ -1,4 +1,4 @@
-# [vSphere] Configuring Virtual Machines
+# 3-1. Configuring Virtual Machines
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 3. Virtual Machines

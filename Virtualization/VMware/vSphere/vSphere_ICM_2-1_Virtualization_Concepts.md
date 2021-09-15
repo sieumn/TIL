@@ -1,4 +1,4 @@
-# [vSphere] Virtualization Concepts
+# 2-1. Virtualization Concepts
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 2. Introduction to vSphere and SDDC

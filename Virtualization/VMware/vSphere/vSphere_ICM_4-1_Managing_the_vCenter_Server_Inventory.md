@@ -1,4 +1,4 @@
-# [vSphere] Managing the vCenter Server Inventory
+# 4-1. Managing the vCenter Server Inventory
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 4. vCenter Server 

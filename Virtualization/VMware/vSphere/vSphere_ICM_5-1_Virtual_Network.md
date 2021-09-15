@@ -1,4 +1,4 @@
-# [vSphere] Configuring and Managing Virtual Networks
+# 5-1. Configuring and Managing Virtual Networks
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 5. Configuring and Managing Virtual Network

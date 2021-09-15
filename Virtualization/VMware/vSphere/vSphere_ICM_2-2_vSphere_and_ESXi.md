@@ -1,4 +1,4 @@
-# [vSphere] vSphere and ESXi
+# 2-2. vSphere and ESXi
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 2. Introduction to vSphere and SDDC

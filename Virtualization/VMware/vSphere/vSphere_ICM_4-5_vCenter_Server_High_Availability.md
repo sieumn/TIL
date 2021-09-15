@@ -1,4 +1,4 @@
-# [vSphere] vCenter Server High Availability
+# 4-5. vCenter Server High Availability
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 4. vCenter Server

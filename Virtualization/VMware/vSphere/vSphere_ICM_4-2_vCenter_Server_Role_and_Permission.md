@@ -1,4 +1,4 @@
-# [vSphere] vCenter Server Role and Permission
+# 4-2. vCenter Server Role and Permission
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 4. vCenter Server 

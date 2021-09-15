@@ -1,4 +1,4 @@
-# [vSphere] Monitoring vCenter Server and Its Inventory
+# 4-4. Monitoring vCenter Server and Its Inventory
 
 > vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 4. vCenter Server 
