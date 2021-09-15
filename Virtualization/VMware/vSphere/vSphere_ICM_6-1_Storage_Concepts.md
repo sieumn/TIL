@@ -1,6 +1,6 @@
 # [vSphere] Storage Concepts
 
-> vSphere Install, Configure, Manage [V7] Lecture Note
+> vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 6. Configuring and Managing Virtual Storage
 
 ## 데이터스토어

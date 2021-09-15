@@ -1,7 +1,6 @@
 # [vSphere] Configuring and Managing Virtual Networks
 
-> vSphere Install, Configure, Manage [V7] Lecture Note
-
+> vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 5. Configuring and Managing Virtual Network
 
 ## 물리적 이더넷 스위치

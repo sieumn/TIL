@@ -1,7 +1,6 @@
 # [vSphere] Configuring Virtual Machines
 
-> vSphere Install, Configure, Manage [V7] Lecture Note
-
+> vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 3. Virtual Machines
 
 이번 장은 VM 생성, 프로비저닝, 삭제 등에 관한 내용을 다루는데, 주로 실습 위주라서 필요한 것만 정리

@@ -1,6 +1,6 @@
 # [vSphere] Monitoring vCenter Server and Its Inventory
 
-> vSphere Install, Configure, Manage [V7] Lecture Note
+> vSphere Install, Configure, Manage [V7] Lecture Note <br>
 > Module 4. vCenter Server 
 
 가상 시스템에서 발생하는 장애를 조기에 발견하고 해결하기 위해서는 vCenter Server의 다양한 경고와 로그를 잘 살펴봐야 한다.
