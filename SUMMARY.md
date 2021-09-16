@@ -10,7 +10,8 @@
 ### Development
 
 * [Clean Architecture](Architecture/CleanArchitecture/README.md)
-  * [01. Introduction](Architecture/CleanArchitecture/01_Introduction.md)
+  * [#1 소프트웨어 아키텍처의 필요성](Architecture/CleanArchitecture/01_Introduction.md)
+  * [#2 프로그래밍 패러다임](Architecture/CleanArchitecture/02_Programming_Paradigm.md)
 
 
 ### Virtualization
