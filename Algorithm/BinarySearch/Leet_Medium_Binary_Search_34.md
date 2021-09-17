@@ -102,7 +102,7 @@ public:
 
 ## 회고 및 수정 (C++)
 
-### Left, Right 함수를 하나의 함수로 표현하기
+### 1. Left, Right 함수를 하나의 함수로 표현하기
 
 제출 후에 코드를 다시 보니, SearchLeft와 SearchRight 함수의 대부분이 겹친다는 것을 알게 되었다. 두 함수를 하나의 함수로 표현하면 더 효율적인 코드가 되지 않을까? 라고 생각했고, searchLeft와 searchRight 를 합친 searchLR 을 새로 작성했다.
 
@@ -170,7 +170,7 @@ Runtime이 8ms 에서 4ms로 감소했다.
 ![](images/2021-09-17-10-33-33.png)
 
 
-### Right 범위를 구할 때, 사전에 구한 Left 값을 참조하기
+### 2. Right 범위를 구할 때, 사전에 구한 Left 값을 참조하기
 
 내가 사용한 알고리즘은
 1. target에 해당하는 left range를 구하고
@@ -238,3 +238,5 @@ public:
     }
 };
 ```
+
+![](images/2021-09-17-10-57-55.png)
