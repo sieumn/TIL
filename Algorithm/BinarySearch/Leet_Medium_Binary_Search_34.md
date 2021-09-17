@@ -107,6 +107,7 @@ public:
 제출 후에 코드를 다시 보니, SearchLeft와 SearchRight 함수의 대부분이 겹친다는 것을 알게 되었다. 두 함수를 하나의 함수로 표현하면 더 효율적인 코드가 되지 않을까? 라고 생각했고, searchLeft와 searchRight 를 합친 searchLR 을 새로 작성했다.
 
 변경한 부분은 아래 두 가지다.
+
 1. searchLeft와 searchRight 함술를 searchLR로 통합
 2. Left, Right range 중 어느 것을 탐색 중인지 확인하기 위해 함수 인자에 mode 추가
 
@@ -173,12 +174,14 @@ Runtime이 8ms 에서 4ms로 감소했다.
 ### 2. Right 범위를 구할 때, 사전에 구한 Left 값을 참조하기
 
 내가 사용한 알고리즘은
+
 1. target에 해당하는 left range를 구하고
 2. 그 후에 target값에 해당되는 right range를 구한다.
    
 이 때, right range를 구할 때 탐색을 1에서 구한 left range부터 시작하게 한다면, 더 빠른 탐색이 가능할 것이라고 생각하고 탐색을 시작할 index에 0 대신 index[0] 값을 넣어줬다.
 
 변경한 부분은 아래 두 가지다.
+
 1. searchLR 함수를 호출할 때 0을 index[0]으로 변경
 2. searchLR 함수 내에서 first가 -1인지 검사하는 부분 추가
 
