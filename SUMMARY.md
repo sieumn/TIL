@@ -9,16 +9,17 @@
 
 ### Development
 
-* [Clean Architecture](Architecture/CleanArchitecture/README.md)
-  * [#1 소프트웨어 아키텍처의 필요성](Architecture/CleanArchitecture/01_Introduction.md)
-  * [#2 프로그래밍 패러다임](Architecture/CleanArchitecture/02_Programming_Paradigm.md)
-
 * [Algorithm](Algorithm/README.md)
+  * [Data Structure](Algorithm/DataStructure/README.md)
+    * [Big-O](Algorithm/DataStructure/BigO.md)
   * [Binary Search](Algorithm/BinarySearch/README.md)
     * [Leetcode 33. Search in Rotated Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_33.md)
     * [Leetcode 34. Find First and Last Position of Element in Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_34.md)
     * [Leetcode 74. Search a 2D Matrix (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_74.md)
 
+* [Clean Architecture](Architecture/CleanArchitecture/README.md)
+  * [#1 소프트웨어 아키텍처의 필요성](Architecture/CleanArchitecture/01_Introduction.md)
+  * [#2 프로그래밍 패러다임](Architecture/CleanArchitecture/02_Programming_Paradigm.md)
 
 ### Virtualization
 
