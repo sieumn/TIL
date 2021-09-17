@@ -31,11 +31,15 @@ public:
         
         if(nums.size()==0) return index;
         
-        if(nums[0]==target) index[0] = 0;
-        else searchLeft(nums, 0, nums.size()-1, target, index);
+        if(nums[0]==target)
+            index[0] = 0;
+        else
+            searchLeft(nums, 0, nums.size()-1, target, index);
         
-        if(nums[nums.size()-1]==target) index[1] = nums.size()-1;
-        else searchRight(nums, 0, nums.size()-1, target, index);
+        if(nums[nums.size()-1]==target)
+            index[1] = nums.size()-1;
+        else
+            searchRight(nums, 0, nums.size()-1, target, index);
         
         return index;
     }
@@ -50,6 +54,7 @@ public:
         }
         
         int middle = (first + last) / 2;
+
         if(nums[middle] < target)
             searchLeft(nums, middle+1, last, target, index);
         
@@ -57,10 +62,10 @@ public:
             searchLeft(nums, first, middle-1, target, index);
         
         else{
-            if(nums[middle-1] == target) searchLeft(nums, first, middle-1, target, index);
-            else{
+            if(nums[middle-1] == target)
+                searchLeft(nums, first, middle-1, target, index);
+            else
                 index[0] = middle;
-            }
         }
 
     }
@@ -75,6 +80,7 @@ public:
         }
         
         int middle = (first + last) / 2;
+        
         if(nums[middle] < target)
             searchRight(nums, middle+1, last, target, index);
         
@@ -82,10 +88,10 @@ public:
             searchRight(nums, first, middle-1, target, index);
         
         else{
-            if(nums[middle+1] == target) searchRight(nums, middle+1, last, target, index);
-            else{
+            if(nums[middle+1] == target)
+                searchRight(nums, middle+1, last, target, index);
+            else
                 index[1] = middle;
-            }
         }
         
     }
