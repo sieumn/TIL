@@ -101,3 +101,38 @@ public:
 ```
 
 ![](images/2021-09-17-15-05-28.png)
+
+## 회고 및 수정 (C++)
+
+Row와 Col을 굳이 구분하지 않고 연속된 리스트처럼 생각하고 다시 코드를 작성했다. 특별히 런타임이 빨라진 것은 아니지만 코드는 훨씬 간결해졌다.
+
+```C++
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+                
+        int r = matrix.size();
+        int c = matrix[0].size();
+        if(r == 0 || c == 0) return false;
+        
+        int first = 0, last = r*c - 1;
+        
+        while(first <= last){
+            int middle = (first + last) / 2;
+            int cur = matrix[middle/c][middle%c];
+            
+            if(cur > target)
+                last = middle - 1;
+            else if(cur < target)
+                first = middle + 1;
+            else{
+                return true;
+            }
+        }
+        
+        return false;
+    }    
+};
+```
+
+![](images/2021-09-17-15-17-30.png)
