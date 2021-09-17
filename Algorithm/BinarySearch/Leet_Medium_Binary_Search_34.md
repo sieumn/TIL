@@ -1,4 +1,4 @@
-# [Leetcode] 34. Find First and Last Position of Element in Sorted Array
+# Leetcode 34. Find First and Last Position of Element in Sorted Array (C++)
 
 ## 문제
 
@@ -20,7 +20,7 @@ target에 해당되는 index가 여러개 있을 수 있기 때문에, target �
 
 Divide and conquer 방식을 사용할 경우, 탐색을 반복할 때마다 탐색 대상이 1/2 씩 줄어든다. 따라서 각 searchLeft(), searchRight() 함수는 log n의 시간 복잡도를 갖고, 최종적으로 2*log n 의 시간 복잡도를 갖는 코드를 작성할 수 있다. 
 
-## 최종 코드
+## 최종 코드 (C++)
 
 ```C++
 class Solution {

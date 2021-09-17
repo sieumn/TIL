@@ -15,7 +15,7 @@
 
 * [Algorithm](Algorithm/README.md)
   * [Binary Search](Algorithm/BinarySearch/README.md)
-    * [Leetcode 34. Find First and Last Position of Element in Sorted Array](Algorithm/BinarySearch/Leet_Medium_Binary_Search_34.md)
+    * [Leetcode 34. Find First and Last Position of Element in Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_34.md)
 
 
 ### Virtualization
