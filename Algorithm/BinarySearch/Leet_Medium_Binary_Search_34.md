@@ -1,5 +1,7 @@
 # Leetcode 34. Find First and Last Position of Element in Sorted Array (C++)
 
+Date: 2021.09.17
+
 ## 문제
 
 https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
