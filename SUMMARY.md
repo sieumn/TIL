@@ -13,6 +13,10 @@
   * [#1 소프트웨어 아키텍처의 필요성](Architecture/CleanArchitecture/01_Introduction.md)
   * [#2 프로그래밍 패러다임](Architecture/CleanArchitecture/02_Programming_Paradigm.md)
 
+* [Algorithm](Algorithm/README.md)
+  * [Binary Search](Algorithm/BinarySearch/README.md)
+    * [Leetcode 34. Find First and Last Position of Element in Sorted Array](Algorithm/BinarySearch/Leet_Medium_Binary_Search_34.md)
+
 
 ### Virtualization
 
