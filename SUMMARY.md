@@ -10,8 +10,7 @@
 ### Development
 
 * [Algorithm](Algorithm/README.md)
-  * [Data Structure](Algorithm/DataStructure/README.md)
-    * [Big-O](Algorithm/DataStructure/BigO.md)
+  * [Big-O](Algorithm/BigO.md)
   * [Binary Search](Algorithm/BinarySearch/README.md)
     * [Leetcode 33. Search in Rotated Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_33.md)
     * [Leetcode 34. Find First and Last Position of Element in Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_34.md)
