@@ -296,7 +296,6 @@ void deleteList(){
 ## Linked List 구현 전체 코드 (C++)
 
 ```C++
-
 #include<iostream>
 using namespace std;
 
@@ -538,7 +537,7 @@ int main(){
     return 0;
 }
 
-```ㄴ
+```
 
 ## Reference
 
