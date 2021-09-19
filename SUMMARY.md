@@ -7,6 +7,9 @@
 * [TIL](DailyTIL/README.md)
   * [2021.09](DailyTIL/2021.09.md)
 
+* [Inspiration](Personal/Inspiration_note/README.md)
+  * [2021 영감 노트](Personal/Inspiration_note/inspiration_note_2021.md)
+
 ### Development
 
 * [Algorithm](Algorithm/README.md)
