@@ -18,7 +18,7 @@ https://leetcode.com/problems/3sum/
 
 ### 시간 복잡도
 
-1. C++ STL의 sort() 함수는 언제든 Intro Sort라는 알고리즘을 구현하는 정렬 함수다. intro sort는 quick sort, heap sort, insertion sort 세 가지 정렬 알고리즘을 조합한 알고리즘으로, 언제나 O(nlogn)의 시간 복잡도를 보장한다. sort를 직접 구현해야만 하는 경우가 아니라면, sort 함수를 사용하여 O(nlogn)의 시간 복잡도를 가진 정렬을 구현할 수 있다.
+1. C++ STL의 sort() 함수는 intro sort라는 알고리즘을 구현하는 정렬 함수다. intro sort는 quick sort, heap sort, insertion sort 세 가지 정렬 알고리즘을 조합한 알고리즘으로, 언제나 O(nlogn)의 시간 복잡도를 보장한다. sort를 직접 구현해야만 하는 경우가 아니라면, sort 함수를 사용하여 O(nlogn)의 시간 복잡도를 가진 정렬을 구현할 수 있다.
    
 2. 먼저 for문은 O(n)의 시간 복잡도를 가진다. for문 내에서는 left, right를 한 칸씩 이동시키며 탐색을 계속하는데, 이 또한 O(n)의 시간 복잡도를 가진다. 따라서 세 원소를 탐색하는 알골리즘은 O(n^2)의 시간 복잡도를 갖는다.
 
