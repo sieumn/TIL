@@ -23,6 +23,8 @@
     * [Leetcode 33. Search in Rotated Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_33.md)
     * [Leetcode 34. Find First and Last Position of Element in Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_34.md)
     * [Leetcode 74. Search a 2D Matrix (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_74.md)
+    * [Leetcode 153. Find Minimum in Rotated Sorted Array (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_153.md)
+    * [Leetcode 162. Find Peak Element (C++)](Algorithm/BinarySearch/Leet_Medium_Binary_Search_162.md)
 
 * [Clean Architecture](Architecture/CleanArchitecture/README.md)
   * [#1 소프트웨어 아키텍처의 필요성](Architecture/CleanArchitecture/01_Introduction.md)
