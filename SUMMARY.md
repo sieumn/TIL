@@ -17,6 +17,7 @@
   * [Data Structure](Algorithm/DataStructure/README.md)
     * [Array and String](Algorithm/DataStructure/Array_and_String.md)
     * [Linked List](Algorithm/DataStructure/Linked_List.md)
+    * [Hash Table](Algorithm/DataStructure/Hash_Table.md)
     * [Stack](Algorithm/DataStructure/Stack.md)
     * [Queue and Circular Queue](Algorithm/DataStructure/Queue.md)
   * [Binary Search](Algorithm/BinarySearch/README.md)
