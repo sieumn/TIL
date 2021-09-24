@@ -30,10 +30,10 @@
     * [Leetcode 15. 3Sum (C++)](Algorithm/TwoPointers/Leet_Medium_Two_Pointers_15.md)
     * [Leetcode 82. Remove Duplicates from Sorted List II (C++)](Algorithm/TwoPointers/Leet_Medium_Two_Pointers_82.md)
 
-
 * [Clean Architecture](Architecture/CleanArchitecture/README.md)
   * [#1 소프트웨어 아키텍처의 필요성](Architecture/CleanArchitecture/01_Introduction.md)
   * [#2 프로그래밍 패러다임](Architecture/CleanArchitecture/02_Programming_Paradigm.md)
+  * [#3 설계 원칙](Architecture/CleanArchitecture/03_Design_Principle.md)
 
 ### Virtualization
 
