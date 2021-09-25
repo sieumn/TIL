@@ -6,7 +6,7 @@ Date: 2021.09.21
 
 https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 
-- input: 정수형 배열 nums
+- input: 배열의 첫 번째 노드 *head
 - output: 주어진 배열에서 peek index 중 하나 출력
 - constraint: 시간 복잡도 O(log n) 내로 작성
 
