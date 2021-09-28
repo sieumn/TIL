@@ -94,6 +94,35 @@ void push(int val){
 
 우선순위 큐에서 삭제 동작은 우선순위가 가장 높은 데이터를 삭제 및 반환하는 것을 의미한다. 최댓값을 제거하기 위해서는 루트 노드의 값을 제거하면 된다. 최댓값 제거 후에 maxheap 속성을 유지하기 위해서 heap의 가장 마지막 노드를 빈 루트 노드에 저장한다. 그 후 루트 노드를 자식 노드와 교환해가며 자리를 찾아 준다. 만약 두 개의 자식 노드로 모두 이동할 수 있다면, 최대 힙에서는 더 큰 값을 가진 자식과 위치를 교환한다. 삭제 연산은 O(log n)의 시간이 소요된다.
 
+```C++
+// 데이터 삭제. 가장 마지막 노드를 root에 두고 아래로 내리며 자리를 찾는다.
+int pop(){
+    if(isEmpty()){
+        cout << "PQ is empty." << endl;
+        return -1;
+    }
+    int top = maxheap[1];
+    int val = maxheap[size--];
+
+    int parent = 1;
+    int child = parent * 2;
+
+    while(child <= size){
+        if(child < size && maxheap[child] < maxheap[child+1])
+            child++;
+        
+        if(val < maxheap[child]){
+            maxheap[parent] = maxheap[child];
+            parent = child;
+            child = parent * 2;
+        }
+        else break;
+    }
+    maxheap[parent] = val;
+    return top;
+}
+```
+
 ## 우선순위 큐 전체 구현 코드 (C++)
 
 ```C++
