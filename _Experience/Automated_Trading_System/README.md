@@ -1,8 +1,7 @@
 # 개발 스터디
 
-`개발 스터디를 진행하며 매주 배우고 느낀 점을 기록합니다.`
-
-`현재 진행형으로, 매주 업데이트 됩니다.`
+> 개발 스터디를 진행하며 매주 배우고 느낀 점을 기록합니다. <br>
+> 현재 진행형으로, 매주 업데이트 됩니다.
 
 ## Fi-Pi
 
@@ -31,4 +30,4 @@
 ## 스터디 주간 회고
 
 * [#0 오늘 스터디에서 배운 것 (TIL)](/_Experience/Automated_Trading_System/00_meeting_til.md)
-* [#1 아키텍처는 뭐고 난 누구인가](/_Experience/Automated_Trading_System/README.md)
+* [#1 아키텍처는 뭐고 난 누구인가](/_Experience/Automated_Trading_System/01_week1_log.md)
