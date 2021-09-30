@@ -4,11 +4,16 @@
 
 ### TIL
 
-* [TIL](DailyTIL/README.md)
-  * [2021.09](DailyTIL/2021.09.md)
+* [TIL](_DailyTIL/README.md)
+  * [2021.09](_DailyTIL/2021.09.md)
 
-* [Inspiration](Personal/Inspiration_note/README.md)
-  * [2021 영감 노트](Personal/Inspiration_note/inspiration_note_2021.md)
+### Personal Logs
+
+* [Experience](_Experience/README.md)
+  * [자동매매 프로그램 개발](_Experience/Automated_Trading_System/README.md)
+
+* [Inspiration](_Personal/Inspiration_note/README.md)
+  * [2021 영감 노트](_Personal/Inspiration_note/inspiration_note_2021.md)
 
 ### Development
 
