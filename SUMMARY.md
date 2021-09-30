@@ -21,6 +21,7 @@
     * [Stack](Algorithm/DataStructure/Stack.md)
     * [Queue and Circular Queue](Algorithm/DataStructure/Queue.md)
     * [Binary Tree](Algorithm/DataStructure/Binary_Tree.md)
+    * [Binary Search Tree](Algorithm/DataStructure/Binary_Search_Tree.md)
     * [Binary Heap](Algorithm/DataStructure/Binary_Heap.md)
     * [Priority Queue](Algorithm/DataStructure/Priority_Queue.md)
   * [Binary Search](Algorithm/BinarySearch/README.md)
@@ -39,6 +40,7 @@
   * [#1 소프트웨어 아키텍처의 필요성](Architecture/CleanArchitecture/01_Introduction.md)
   * [#2 프로그래밍 패러다임](Architecture/CleanArchitecture/02_Programming_Paradigm.md)
   * [#3 설계 원칙](Architecture/CleanArchitecture/03_Design_Principle.md)
+  * [#4 컴포넌트 원칙](Architecture/CleanArchitecture/04_Component_Principle.md)
 
 ### Virtualization
 
