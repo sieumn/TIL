@@ -55,6 +55,11 @@
 
 ### Virtualization
 
+* [AWS Windows 서버 사용하기](Virtualization/AWS/README.md)
+  * [#1 AWS 무료 Windows 서버 생성하기](Virtualization/AWS/01_Create_EC2_Server.md)
+  * [#2 MAC에서 AWS 서버에 접속하기](Virtualization/AWS/02_Connect_EC2_from_MAC.md)
+  * [#3 Windows 서버 초기 환경 설정](Virtualization/AWS/03_Windows_Server_Initial_Setting.md)
+
 * [VMware](Virtualization/VMware/README.md)
   * [vSphere](Virtualization/VMware/vSphere/README.md)
     * [2-1. Virtualization Concepts](Virtualization/VMware/vSphere/vSphere_ICM_2-1_Virtualization_Concepts.md)
