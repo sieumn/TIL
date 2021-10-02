@@ -42,7 +42,7 @@ App Store 에서 Microsoft Remote Desktop 애플리케이션을 설치한다.
 
 - Windows 서버 추가 완료된 모습이다.
 
-    ![](images/2021-10-02-20-21-08.png)
+![](images/2021-10-02-20-21-08.png)
 
 ## Windows Server에 원격 접속
 
