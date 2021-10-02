@@ -15,5 +15,7 @@
 
 ### Link
 
-- gitHub: https://github.com/sieumn
-- LinkedIn: https://www.linkedin.com/in/sieumn/
+- [TIL-log](https://til.sieumn.com)
+- [gitHub](https://github.com/sieumn)
+- [LinkedIn](https://www.linkedin.com/in/sieumn)
+- e-mail: sieumn@gmail.com
