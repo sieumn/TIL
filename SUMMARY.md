@@ -13,9 +13,10 @@
 * [Experience](_Experience/README.md)
   * [미라클 모닝](_Experience/Miracle_Morning/README.md)
     * [#1 나는 왜 새벽에 일어나는가](/_Experience/Miracle_Morning/01_Introduction.md)
-  * [자동매매 프로그램 개발](_Experience/Automated_Trading_System/README.md)
-    * [#0 오늘 스터디에서 배운 것 (TIL)](/_Experience/Automated_Trading_System/00_meeting_til.md)
-    * [#1 아키텍처는 뭐고 난 누구인가](/_Experience/Automated_Trading_System/01_week1_log.md)
+  * [시스템 트레이딩 개발](_Experience/System_Trading/README.md)
+    * [#0 오늘 스터디에서 배운 것 (TIL)](_Experience/System_Trading/00_meeting_til.md)
+    * [#1 아키텍처는 뭐고 난 누구인가](_Experience/System_Trading/01_week1_log.md)
+    * [#2 MAC 에서 증권사 API 사용하기](_Experience/System_Trading/01_week1_log.md)
 
 * [Inspiration](_Personal/Inspiration_note/README.md)
   * [2021 영감 노트](_Personal/Inspiration_note/inspiration_note_2021.md)
