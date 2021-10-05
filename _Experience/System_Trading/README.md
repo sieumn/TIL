@@ -32,4 +32,4 @@
 
 * [#0 오늘 스터디에서 배운 것 (TIL)](/_Experience/System_Trading/00_meeting_til.md)
 * [#1 아키텍처는 뭐고 난 누구인가](/_Experience/System_Trading/01_week1_log.md)
-* [#2 MAC 에서 증권사 API 사용하기](/_Experience/System_Trading/01_week2_log.md)
+* [#2 MAC 에서 증권사 API 사용하기](/_Experience/System_Trading/02_week2_log.md)
