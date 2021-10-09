@@ -55,6 +55,7 @@
   * [#4 컴포넌트 원칙](Architecture/CleanArchitecture/04_Component_Principle.md)
   * [#5 아키텍처의 역할과 결합 분리 모드](Architecture/CleanArchitecture/05_Architecture.md)
   * [#6 아키텍처의 경계 해부학](Architecture/CleanArchitecture/06_Architecture_Boundary.md)
+  * [#7 클린 아키텍처 계층과 규칙](Architecture/CleanArchitecture/07_Clean_Architecture.md)
 
 ### Virtualization
 
