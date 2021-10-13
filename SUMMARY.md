@@ -24,7 +24,11 @@
 
 ### Development
 
-* [Algorithm](Algorithm/README.md)
+* [Language](language/README.md)
+  * [Python](language/python/README.md)
+    * [Python Code Style](language/python/python_code_style.md)
+
+* [Data Structure/Algorithm](Algorithm/README.md)
   * [Big-O](Algorithm/BigO.md)
   * [Data Structure](Algorithm/DataStructure/README.md)
     * [Array and String](Algorithm/DataStructure/Array_and_String.md)
