@@ -149,4 +149,3 @@ branch에서 작업을 끝내고, 모든 협업자가 볼 수 있는 master bran
 ### `git reset`
 
 이전 버전 또는 특정 commit 버전으로 돌아갈 때 사용한다. `git reset <option> <돌아가고싶은 commit>` 형태로 사용한다.
-
