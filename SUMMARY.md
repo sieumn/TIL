@@ -24,9 +24,9 @@
 
 ### Development
 
-* [Language](language/README.md)
-  * [Python](language/python/README.md)
-    * [Python Code Style](language/python/python_code_style.md)
+* [Language](Language/README.md)
+  * [Python](Language/Python/README.md)
+    * [Python Code Style](Language/Python/python_code_style.md)
 
 * [Data Structure/Algorithm](Algorithm/README.md)
   * [Big-O](Algorithm/BigO.md)
@@ -64,8 +64,8 @@
   * [#8 계층과 경계](Architecture/CleanArchitecture/08_Layers_and_Boundary.md)
   * [#9 메인, 서비스, 테스트](Architecture/CleanArchitecture/09_Main_Service_Test.md)
 
-* [Git](git/README.md)
-  * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
+* [Git](Git/README.md)
+  * [Git 시작하기: 개념, 명령어](Git/01_git_getting_started.md)
 
 ### Virtualization
 
