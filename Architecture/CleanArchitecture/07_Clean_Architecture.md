@@ -2,7 +2,7 @@
 
 <!-- 2021.10.09 -->
 
-> Clean Architecture(Martin, Robert C.) 5부 19-23장 정리
+> Clean Architecture(Martin, Robert C.) 5부 20-23장 정리
 
 ## 이 페이지를 읽으면 알 수 있는 것
 
