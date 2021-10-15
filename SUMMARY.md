@@ -66,6 +66,7 @@
 
 * [Git](git/README.md)
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
+  * [Git add, commit, push 취소하기](git/02_git_how_to_revert.md)
 
 ### Virtualization
 
