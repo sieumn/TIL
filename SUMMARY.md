@@ -68,6 +68,11 @@
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
   * [Git add, commit, push 취소하기](git/02_git_how_to_revert.md)
 
+### Computer Science
+
+* [Operating System](ComputerScience/OperatingSystem/Course_CPA310_OperatingSystem/README.md)
+  * [#1 컴퓨터 시스템 개요](ComputerScience/OperatingSystem/Course_CPA310_OperatingSystem/01_computer_system_overview.md)
+
 ### Virtualization
 
 * [AWS Windows 서버 사용하기](Virtualization/AWS/README.md)
