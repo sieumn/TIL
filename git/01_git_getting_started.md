@@ -149,3 +149,9 @@ branch에서 작업을 끝내고, 모든 협업자가 볼 수 있는 master bran
 ### `git reset`
 
 이전 버전 또는 특정 commit 버전으로 돌아갈 때 사용한다. `git reset <option> <돌아가고싶은 commit>` 형태로 사용한다.
+
+### `git remove`
+
+원격 저장소에서 특정 파일이나 폴더를 삭제하고 싶을 때 사용한다. `git remove <option> <특정 파일명 또는 폴더명>`의 형태로 사용한다. 기본적으로 remove 명령어는 원격 저장소와 로컬 저장소 모두에서 해당 파일을 삭제한다.
+
+이 때, `git remove --cached filename`처럼 --cached 옵션을 사용하게 되면, 원격 저장소에서는 삭제하지만 로컬 저장소에서는 삭제하지 않는다는 의미를 갖는다. 
