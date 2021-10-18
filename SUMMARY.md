@@ -63,6 +63,7 @@
   * [#7 클린 아키텍처 계층과 규칙](Architecture/CleanArchitecture/07_Clean_Architecture.md)
   * [#8 계층과 경계](Architecture/CleanArchitecture/08_Layers_and_Boundary.md)
   * [#9 메인, 서비스, 테스트](Architecture/CleanArchitecture/09_Main_Service_Test.md)
+  * [#10 클린 임베디드 아키텍처](Architecture/CleanArchitecture/10_Clean_Embeded_Architecture.md)
 
 * [Git](git/README.md)
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
