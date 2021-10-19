@@ -3,8 +3,8 @@
 다음과 같이 remove, commit, push 과정을 진행하면 된다.
 
 ```vim
-git rm -f *.pyc
-git commit -a -m 'all pyc files removed'
+git rm -f "*.pyc"
+git commit -a -m "all pyc files removed"
 git push
 ```
 
