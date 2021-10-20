@@ -74,6 +74,7 @@
 
 * [Operating System](ComputerScience/OperatingSystem/Course_CPA310_OperatingSystem/README.md)
   * [#1 컴퓨터 시스템 개요](ComputerScience/OperatingSystem/Course_CPA310_OperatingSystem/01_computer_system_overview.md)
+  * [#2 운영체제 개요](ComputerScience/OperatingSystem/Course_CPA310_OperatingSystem/02_operating_system_overview.md)
 
 ### Virtualization
 
