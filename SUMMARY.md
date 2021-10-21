@@ -70,6 +70,7 @@
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
   * [Git add 취소, commit 취소, push 취소](git/02_git_how_to_revert.md)
   * [GitHub 원격 저장소에서 .pyc 파일 모두 지우기](git/03_remove_all_pyc.md)
+  * [Git 폴더 이름 변경하기](git/04_rename_git_folder.md)
 
 ### Computer Science
 
