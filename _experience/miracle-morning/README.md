@@ -22,4 +22,4 @@
 
 ### 목차
 
-* [#1 나는 왜 새벽에 일어나는가](/_Experience/Miracle_Morning/01_Introduction.md)
+* [#1 나는 왜 새벽에 일어나는가](01_intro.md)
