@@ -80,6 +80,9 @@
 
 ### Virtualization
 
+* [Kubernetes](virtualization/kubernetes/README.md)
+  * [[번역] KubeVirt 시작하기](virtualization/kubernetes/kubevirt-getting-to-know.md)
+
 * [AWS Windows 서버 사용하기](virtualization/aws/README.md)
   * [#1 AWS 무료 Windows 서버 생성하기](virtualization/aws/01_create-EC2-server.md)
   * [#2 MAC에서 AWS 서버에 접속하기](virtualization/aws/02_connect-EC2-from-MAC.md)
