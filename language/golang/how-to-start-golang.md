@@ -1,7 +1,7 @@
-# GoLang (Go 언어) 공부 방법
+# GoLang(Go 언어) 온라인 학습 자료
 
 - [GoLang Official Page](https://golang.org)
-
+  + 궁금한 게 있으면 공식 페이지를 자주 보자.
 - [예제로 배우는 Go 프로그래밍](http://golang.site)
   + 예제와 함께 Go 언어에 대해 빠르게 이해할 수 있다.
 - [가장 빨리 만나는 Go 언어](http://pyrasis.com/go.html)
