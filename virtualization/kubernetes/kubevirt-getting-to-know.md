@@ -2,15 +2,15 @@
 
 - 원문([Getting to Know Kubevirt](https://kubernetes.io/blog/2018/05/22/getting-to-know-kubevirt/))을 읽고 번역한 글입니다.
 
-당신이 Kubernetes에서 Linux 컨테이너 워크 로드를 실행하는 데 익숙해지면, 당신은 Kubernetes 클러스터에서 다른 종류의 워크 로드를 실행하기를 바라게 될 수 있다. 당신은 컨테이너용으로 설계되지 않았거나, 컨테이너 호스트에서 사용할 수 있는 것과 다른 버전의 Linux 커널 또는 모두 다른 운영체제가 필요한 애플리케이션을 실행해야 할 수도 있다.
+Kubernetes에서 Linux 컨테이너 워크 로드를 실행하는 데 익숙해졌다면, Kubernetes 클러스터에서 다른 종류의 워크 로드를 실행하기를 바라게 될 수 있다. 어떤 애플리케이션은 컨테이너용으로 설계되지 않았거나, 컨테이너 호스트에서 사용할 수 있는 것과 다른 버전의 Linux 커널 또는 다른 운영체제를 필요로 할 수도 있다. 어떤 워크 로드들은 가상머신(VM)에서 실행하는 것이 적합할 수도 있다.
 
-이런 워크 로드들은 때로는 가상머신(VM)에서 실행하는 것이 적합하다. 그리고 KubeVirt는 Kubernetes에서 사용할 수 있는 가상 머신 관리 add-on 기능으로, 사용자가 Kubernetes 또는 Openshift 클러스터에서 컨테이너와 함께 VM을 바로 실행할 수 있도록 하는 것을 목표로 한다.
+KubeVirt는 Kubernetes에서 사용할 수 있는 가상 머신 관리 add-on 기능이다. KubeVirt는 사용자가 Kubernetes 또는 Openshift 클러스터 등에서 VM을 바로 실행할 수 있도록 하는 것을 목표로 한다.
 
-KubeVirt는 Kubernetes의 Custom Resource Definitions(CRD) API를 통해 VM과 VM 집합에 대한 리소스 유형을 추가함으로써 Kubernetes 기능을 확장한다. KubeVirt VM들은 표준 pod 네트워킹 및 스토리지에 접근할 수 있는 Kubernetes pods 내에서 실행되며, kubectl 등의 표준 Kubernetes 도구를 사용하여 관리될 수 있다.
+KubeVirt는 Kubernetes의 Custom Resource Definitions(CRD) API를 통해 VM에 대한 리소스 유형을 추가함으로써 Kubernetes의 기능을 확장한다. KubeVirt VM들은 표준 pod 네트워킹 및 스토리지에 접근할 수 있는 Kubernetes pods 내에서 실행되며, kubectl 등의 표준 Kubernetes 도구를 사용하여 관리될 수 있다.
 
-Kubernetes로 VM을 실행하는 것은 oVirt나 OpenStack에 비해 약간의 적응이 필요하며, KubeVirt의 기본 아키텍처를 이해하는 것은 좋은 시작점이다.
+Kubernetes로 VM을 실행하는 것은 oVirt나 OpenStack에 비해 약간의 적응이 필요할 것이며, KubeVirt의 기본 아키텍처를 이해하는 것은 좋은 시작점이다.
 
-이 게시물에서는 KubeVirt의 구성 요소에 대해 고수준에서 다뤄볼 예정이다. 우리가 다룰 구성 요소들은 CRDs, KubVirt virt-controller, virt-handler, virt-launcher, libvirt, storage, networking 등이 있다.
+이 게시물에서는 KubeVirt의 구성 요소에 대해 다뤄볼 예정이다. 우리가 다룰 구성 요소들은 CRDs, KubVirt virt-controller, virt-handler, virt-launcher, libvirt, storage, networking 등이 있다.
 
 ## KubeVirt Components
 
@@ -18,9 +18,9 @@ Kubernetes로 VM을 실행하는 것은 oVirt나 OpenStack에 비해 약간의 �
 
 ### Custom Resource Definitions (CRDs)
 
-Kubernetes 리소스는 관련된 API 개체들의 집합을 저장하는 Kubernettes API의 끝점이다. 예를 들어, 기본 제공 pods 리소스는 Pod 개체의 집합이다. Kubernetes CRD API는 지정된 이름과 스키마로 새 개체를 정의함으로써 Kubernetes를 확장하는 것을 가능하게 한다. 클러스터에 사용자 리소스를 적용하면, Kubernetes API 서버는 사용자 지정 리소스의 저장소를 제공하고 처리한다.
+Kubernetes 리소스는 관련된 API 개체들의 집합을 저장하는 Kubernetes API의 end-point이다. 예를 들어, 기본 제공 pods 리소스는 Pod 개체의 집합이다. Kubernetes CRD API는 지정된 이름과 스키마로 새 개체를 정의함으로써 Kubernetes를 확장하는 것을 가능하게 한다. 클러스터에 사용자 리소스를 적용하면, Kubernetes API 서버는 사용자 지정 리소스의 저장소를 제공하고 처리한다.
 
-KubeVirt의 주요 CRD는 Kubernetes API 서버 내에서 VM 개체 모음을 포함하는 VM 리소스다. VM 리소스는 CPU 유형, RAM 및 vCPU 용량, VM에서 사용할 수 있는 NIC의 유형과 수 등과 같이 VM과 관련된 모든 속성을 정의한다.
+KubeVirt의 기본 CRD는 Kubernetes API 서버 내에서 VM 개체 모음을 포함하는 VM 리소스다. VM 리소스는 CPU 유형, RAM 및 vCPU 용량, VM에서 사용할 수 있는 NIC의 유형과 수 등과 같이 VM과 관련된 모든 속성을 정의한다.
 
 ### virt-controller
 
