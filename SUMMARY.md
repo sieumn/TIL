@@ -87,6 +87,7 @@
   * [가상화 개념 쉽게 이해하기](virtualization/general/01_virtualization-concept.md)
   * [가상화의 등장 배경과 발전](virtualization/general/02_virtualization-hisory.md)
   * [가상 머신(VM)과 하이퍼바이저 쉽게 이해하기](virtualization/general/03_vm-and-hypervisor.md)
+  * [전가상화와 반가상화 쉽게 이해하기](virtualization/general/04_full-and-para-virtualization.md)
 
 * [Kubernetes](virtualization/kubernetes/README.md)
   * [[번역] KubeVirt 시작하기](virtualization/kubernetes/kubevirt-getting-to-know.md)
