@@ -88,7 +88,7 @@ docker-containerd는 고수준 컨테이너 런타임 기능을 담당하며, da
 
 docker-runc는 저수준 컨테이너 런타임 기능을 담당하며, 런타임 환경이 구현해야 하는 spec이 포함되어 있다. runc는 컨테이너를 생성한 후에 바로 종료된다.
 
-## CRI (Container Runtime Interface)
+### CRI (Container Runtime Interface)
 
 CRI는 Kubernetes에서 만든 컨테이너 런타임 인터페이스다. 초기의 Kubernetes는 컨테이너를 실행하기 위해 Docker를 사용했었는데, docker의 동작에 대한 정보는 kubelet 소스코드 내부에 통합되어 있었다. 이것은 kubelet 코드를 복잡하게 만들었고, 유지 보수 오버헤드를 발생시켰다.
 
