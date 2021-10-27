@@ -110,6 +110,7 @@ Kubernetes는 여러 컨테이너 애플리케이션을 여러 대의 서버에 
 
 - [Linux) Doker와 Container의 탄생과 설명, 차이점](https://hwan-shell.tistory.com/116)
 - [컨테이너란? 리눅스의 프로세스 격리 기능](https://www.44bits.io/ko/keyword/linux-container#리눅스-네임스페이스linux-namespace)
+- [컨테이너 기초 - chroot를 사용한 프로세스의 루트 디렉터리 격리](https://www.44bits.io/ko/post/change-root-directory-by-using-chroot)
 - [Container Runtime과 Docker](https://cwal.tistory.com/31)
 - [Container Runtimes Part 3: High-Level Runtimes](https://www.ianlewis.org/en/container-runtimes-part-3-high-level-runtimes)
 - [흔들리는 도커(Docker)의 위상 - OCI와 CRI 중심으로 재편되는 컨테이너 생태계](https://post.naver.com/viewer/postView.nhn?volumeNo=28882881)
