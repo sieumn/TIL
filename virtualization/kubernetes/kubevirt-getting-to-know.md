@@ -26,11 +26,11 @@ KubeVirt의 기본 CRD는 Kubernetes API 서버 내에서 VM 개체 모음을 �
 
 virt-controller는 클러스터 전체의 가상화 기능을 담당하는 Kubernetes Operator이다. 새로운 VM 개체가 Kubernetes API 서버에 전달되면, virt-controller가 이를 인식하고 VM이 실행될 pod를 생성한다. pod가 특정 노드에 예약되면, virt-controller는 노드 이름으로 VM 개체를 업데이트하고 노드별 KubeVirt 구성요소인 virt-handler에게 다음 책임을 넘긴다.
 
-## virt-handler
+### virt-handler
 
 virt-controller와 유사하게 virt-handler도 반응형 인스턴트로, VM 개체의 변경사항을 감시하고 VM이 필요로 하는 요구 사항을 충족하도록 필요한 작업을 수행한다. virt-handler는 VM의 사양을 참조하고, VM의 pod에서 libvirtd 인스턴트를 사용하여 해당 도메인 생성을 알린다. VM 개체가 삭제되면 virt-handler는 삭제를 관찰하고 도메인을 끈다.
 
-## virt-launcher
+### virt-launcher
 
 모든 VM 개체에 대해 하나의 pod가 생성된다. 이 pod의 기본 컨테이너는 virt-launcher라고 하는 KubeVirt의 구성 요소를 실행시킨다. virt-launcher pod의 주요 목적은 VM 프로세스를 호스팅 하는 데 사용할 cgroup과 네임스페이스를 제공하는 것이다.
 
