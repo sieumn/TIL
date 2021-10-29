@@ -217,4 +217,4 @@ PCB는 운영체제가 프로세스를 관리하는 도구로, PCB의 형태는 
 
 ## Reference
 
-- [김덕수 교수 운영체제 강의 - Lec 3.](https://youtu.be/jZuTw2tRT7w)
+- [운영체제 강의(김덕수 교수) - Lec 3.](https://youtu.be/jZuTw2tRT7w)
