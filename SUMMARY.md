@@ -83,6 +83,7 @@
   * [#1 컴퓨터 시스템 개요](operating-system/course_CPA310-operating-system/01_computer-system-overview.md)
   * [#2 운영체제 개요](operating-system/course_CPA310-operating-system/02_operating-system-overview.md)
   * [#3 프로세스 관리](operating-system/course_CPA310-operating-system/03_process-management.md)
+  * [#4 스레드 관리](operating-system/course_CPA310-operating-system/04_thread-management.md)
 
 ### Virtualization
 
