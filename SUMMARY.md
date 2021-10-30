@@ -93,6 +93,7 @@
   * [#3 가상 머신(VM)과 하이퍼바이저 쉽게 이해하기](virtualization/general/03_vm-and-hypervisor.md)
   * [#4 전가상화와 반가상화 쉽게 이해하기](virtualization/general/04_full-and-para-virtualization.md)
   * [#5 컨테이너의 개념과 발전](virtualization/general/05_container-concept.md)
+  * [#6 QEMU와 KVM의 개념](virtualization/general/06_qemu-and-kvm.md)
 
 * [Kubernetes](virtualization/kubernetes/README.md)
   * [[번역] KubeVirt 시작하기](virtualization/kubernetes/kubevirt-getting-to-know.md)
