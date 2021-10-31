@@ -7,6 +7,7 @@
 * [TIL](_daily/README.md)
   * [2021.09](_daily/2021.09.md)
   * [2021.10](_daily/2021.10.md)
+  * [2021.11](_daily/2021.11.md)
 
 ### Personal Logs
 
@@ -67,6 +68,9 @@
   * [#9 메인, 서비스, 테스트](architecture/clean-architecture/09_main-service-test.md)
   * [#10 클린 임베디드 아키텍처](architecture/clean-architecture/10_clean-embeded-architecture.md)
   * [#11 세부사항](architecture/clean-architecture/11_detail.md)
+
+* [Clean Code](/clean-code/README.md)
+  * [#1 깨끗한 코드](/clean-code/01_clean-code.md)
 
 * [Git](git/README.md)
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
