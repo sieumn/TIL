@@ -71,6 +71,7 @@
 
 * [Clean Code](/clean-code/README.md)
   * [#1 깨끗한 코드](/clean-code/01_clean-code.md)
+  * [#2 의미 있는 이름](/clean-code/02_meaningful-name.md)
 
 * [Git](git/README.md)
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
