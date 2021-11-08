@@ -76,6 +76,7 @@
 * [Database](database/README.md)
   * [SQL vs. NoSQL 비교](database/sql-vs-nosql.md)
   * [RDBMS: SQLite 알아보기](database/sql-sqlite.md)
+  * [RDBMS: MySQL 알아보기](database/sql-mysql.md)
 
 * [Git](git/README.md)
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
@@ -94,6 +95,7 @@
   * [#3 프로세스 관리](operating-system/course_CPA310-operating-system/03_process-management.md)
   * [#4 스레드 관리](operating-system/course_CPA310-operating-system/04_thread-management.md)
   * [#5 프로세스 스케줄링](operating-system/course_CPA310-operating-system/05_process-scheduling.md)
+  * [#6 프로세스 동기화와 상호 배제 (1)](operating-system/course_CPA310-operating-system/06_process-synchronization.md)
 
 ### Virtualization
 
