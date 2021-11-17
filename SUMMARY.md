@@ -96,6 +96,7 @@
   * [#4 스레드 관리](operating-system/course_CPA310-operating-system/04_thread-management.md)
   * [#5 프로세스 스케줄링](operating-system/course_CPA310-operating-system/05_process-scheduling.md)
   * [#6 프로세스 동기화와 상호 배제 (1)](operating-system/course_CPA310-operating-system/06_process-synchronization.md)
+  * [#6 프로세스 동기화와 상호 배제 (2)](operating-system/course_CPA310-operating-system/07_process-synchronization-os.md)
 
 ### Virtualization
 
