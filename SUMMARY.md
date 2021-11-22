@@ -72,6 +72,7 @@
 * [Clean Code](/clean-code/README.md)
   * [#1 깨끗한 코드](/clean-code/01_clean-code.md)
   * [#2 의미 있는 이름](/clean-code/02_meaningful-name.md)
+  * [#3 함수](/clean-code/03_function.md)
 
 * [Database](database/README.md)
   * [SQL vs. NoSQL 비교](database/sql-vs-nosql.md)
