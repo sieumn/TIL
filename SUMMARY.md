@@ -87,9 +87,9 @@
 
 * [Flutter](flutter/README.md)
   * [#0 Flutter 학습 방법](flutter/how-to-start-flutter.md)
-  * [#1 Flutter: Overview](flutter/01_flutter-overview.md)
-  * [#2 Flutter: 설치](flutter/02_flutter-installation.md)
-  * [#3 Flutter: 간단한 화면 구성하기](flutter/03_flutter-from-scratch.md)
+  * [#1 Flutter Overview](flutter/01_flutter-overview.md)
+  * [#2 Flutter 설치](flutter/02_flutter-installation.md)
+  * [#3 Flutter 간단한 화면 구성하기](flutter/03_flutter-from-scratch.md)
 
 ### Computer Science
 
