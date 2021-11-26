@@ -9,7 +9,7 @@
 - 함수를 만드는 첫 번째 규칙은 '작게', 둘째 규칙은 '더 작게'다!
 - 함수는 가능한 짧아야 한다. 하나의 함수는 하나의 이야기를 표현해야 한다.
 - if 문, else 문, while 문에 들어가는 블록은 한 줄이어야 한다. 대게는 그 안에서 새로운 함수를 호출한다. 그렇게 하면 함수가 작아질 뿐 아니라, 코드를 이해하기도 쉬워진다.
-- 함수에서 들여쓰기 수준은 1단이나 2단을 넘어서면 안 된다. 중첩 구조가 생길만큼 함수가 커져서는 안 된다는 뜻이다.
+- 함수에서 들여쓰기 수준은 1단이나 2단을 넘어서면 안 된다. 중첩 구조가 생길 만큼 함수가 커져서는 안 된다는 뜻이다.
 
 ### 한 가지만 해라!
 
@@ -28,6 +28,7 @@
 
 - switch 문은 작게 만들기 어렵다. 또한 '한 가지' 작업만 하는 switch 문을 만들기도 어렵다. 하지만, 각 switch 문을 저차원 클래스에 숨기고 절대로 반복하지 않는 방법은 있다.
 - 다음 함수의 문제를 보자.
+
     ```C++
     public Money calculatePay(Employee e)
     throw InvalidEmployeeType {
@@ -87,7 +88,7 @@
 
 - 함수에서 이상적인 인수 개수는 0개(무항)이며, 다음은 1개(단항)고, 다음은 2개(이항)다. 3개(삼항)은 가능한 피하는 편이 좋으며, 4개 이상은 사용하면 안 된다.
 - 인수는 개념을 이해하기 어렵게 만든다. `includeSetupPageInto(newPageContent)`보다 `includeSetupPage()`가 이해하기 더 쉽다.
-  + `includeSetupPageInto(newPageContent)`는 함수 이름과 인수 사이에 추상화 수준이 다르며, 코드를 읽는 사람이 현 시점에서 별로 중요하지 않은 세부사항을 알아야 한다.
+  + `includeSetupPageInto(newPageContent)`는 함수 이름과 인수 사이에 추상화 수준이 다르며, 코드를 읽는 사람이 현시점에서 별로 중요하지 않은 세부사항을 알아야 한다.
 
 - 많이 쓰는 단항 형식
   + 다음 케이스가 아니라면 단항 형식도 가급적 피하라.
@@ -133,6 +134,7 @@
 - 동사와 키워드
   + 단항 함수는 함수와 인수가 동사/명사 쌍을 이뤄야 한다.
   + 함수 이름의 키워드를 추가하면 인수 순서를 기억할 필요가 없어진다.
+    
     ```C++
     assertEquals(expectted, actual)
     assertExpectedEqualsActual(expected, actual)
@@ -145,8 +147,86 @@
 - checkPassword()는 비밀번호만 확인해야 하지, 그 안에서 비밀번호가 틀릴 경우 비밀번호를 초기화하는 행동을 해서는 안 된다.
 - 출력 인수는 피해야 한다. 함수에서 상태를 변경해야 한다면 함수가 속한 객체 상태를 변경하는 방식을 택한다.
   + 첫 번째 방식 대신 두 번째 방식을 사용하라.
+    
     ```C++
     appendFooter(report)
     report.appendFootter()
     ```
 
+### 명령과 조회를 분리하라!
+
+- 함수는 뭔가를 수행하거나 뭔가에 답하거나 둘 중 하나만 해야 한다. 객체 상태를 변경하거나 아니면 객체 정보를 반환하거나 둘 중 하나다. 둘 다 하면 혼란을 초래한다.
+- 다음 코드는 독자에게 혼란을 야기한다. set이라는 단어가 동사인지 형용사인지 구분하기 어려운 탓이다.
+
+  ```C++
+  if (set("username", "unclebob")) ...
+  ```
+
+- 위 코드는 아래와 같이 명령과 조회를 분리할 수 있다.
+
+  ```C++
+  if (attributeExists("username")) {
+    setAtttribute("username", "unclebob");
+    ...
+  }
+  ```
+
+### 오류 코드보다 예외를 사용하라!
+
+- 명령 함수에서 오류 코드를 반환하는 방식은 명령/조회 분리 규칙을 미묘하게 위반한다. 자칫하면 if 문에서 명령을 표현식으로 사용하기 쉬운 탓이다. 또한, 중첩된 코드를 야기한다.
+
+  ```C++
+  if (deletePage(page) == E_OK)
+  ```
+
+- 따라서 오류 코드 대신 예외를 사용해야 한다.
+
+  ```C++
+  try {
+    deletePage(page);
+    registry.deleteReference(page.name);
+    configKeys.deleteKey(page.name.makeKey());
+  }
+  catch (Exception e){
+    logger.log(e.getMessage());
+  }
+  ```
+
+- 하지만 try/catch 블록은 코드 구조에 혼란을 야기하며, 정상 동작과 오류 처리 동작을 뒤섞는다. 따라서 try/catch 블록은 별도 함수로 뽑아내라.
+  
+  ```C++
+  public void delete(Page page){
+    try {
+      deletePageAndAllReference(page);
+    }
+    catch (Exception e){
+      logError(e);
+    }
+  }
+
+  private void deletePageAndnAllReference(Page page) throws Exception {
+    deletePage(page);
+    registry.deleteReference(page.name);
+    configKeys.deleteKey(page.name.makeKey());
+  }
+
+  private void logError(Exception e) {
+    logger.log(e.getMessage());   
+  }
+  ```
+
+  + deletePageAndAllReference는 더 이상 예외를 처리하지 않고, 삭제하는 한 가지 동작만 수행한다. 오류 처리도 한 가지 작업임을 기억하라.
+  
+### 반복하지 마라!
+
+- 중복은 소프트웨어에서 모든 악의 근원이다. 코드 길이가 늘어날 뿐 아니라 알고리즘이 변하면 여러 곳을 손봐야 한다.
+
+### 구조적 프로그래밍
+
+- 구조적 프로그래밍 원칙은 모든 함수에 return 문이 하나여야 한다고 이야기하며, 루프 안에서 break이나 continue를 사용해서는 안 된다고 말한다. 또한, goto는 절대로 사용해서는 안 된다.
+- 하지만 구조적 프로그래밍은 작은 함수에서는 큰 이익을 제공하지 못한다. 그러므로 함수가 작다면 return, break, continue를 여러 번 사용해도 괜찮다.
+- 다만, goto는 큰 함수에서만 의미가 있으므로, 작은 함수에서는 피하라.
+
+### 함수를 어떻게 짜죠?
+
+- 이 장에서 말하는 함수를 한 번에 짜는 사람은 없다. 처음에 짜는 함수는 길고 복잡하겠지만, 코드를 다듬고, 이름을 바꾸고, 중복을 제거하고, 메서드를 줄이고, 순서를 바꾸는 과정을 계속하면 좋은 함수를 얻을 수 있다.
