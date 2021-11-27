@@ -5,7 +5,6 @@
 - [Flutter API Docs](https://api.flutter.dev/index.html) 페이지에 클래스에 대한 설명이나 사용 방법이 잘 나와 있다.
 - [Material Design](https://material.io/design)에서 다양한 디자인 속성들을 확인하고 사용할 수 있다. 
 - [App Icon](https://appicon.co)에서 App Icon을 쉽게 만들 수 있다.
-- 
 
 ## Creating a New Flutter Project from Scratch
 
@@ -62,4 +61,5 @@ void main() {
   
 
 - 결과
+  
   ![](images/2021-11-24-23-23-07.png)
