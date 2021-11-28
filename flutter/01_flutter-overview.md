@@ -1,35 +1,46 @@
 # #1 Flutter Overview
 
-## What is Flutter?
+## Flutter란 무엇인가?
+
+![](images/2021-11-28-17-07-44.png)
+
+Flutter는 Google에서 개발한 크로스 플랫폼 모바일 앱 개발 프레임워크다. Flutter를 사용하면 하나의 플랫폼으로 iOS와 Android에 배포할 수 있는 앱을 동시에 개발할 수 있다.
+
+## Language
+
+![](images/2021-11-28-17-07-59.png)
+
+Flutter는 Dart 언어를 사용한다. Dart는 Google에서 만든 프로그래밍 언어로, Javascript 보다 더 나은 Server side 및 Front-End 코드 작성 언어를 만들기 위해 등장했다. 
+
+## Flutter 장점
 
 1. IOS와 Android를 동시에 개발할 수 있다.
 
-    - App 개발에 대해 생각해보자. 한 명의 개발자가 IOS와 Android를 동시에 개발하는 것은 어렵다.
-    - 같은 앱을 완전히 다른 방법으로 공부하고, 개발해서 IOS와 Andriod에 배포해야하며, 유지보수 또한 별도로 진행해야 한다.
+   - "one code base to maintain, one place to debug, and one place to update"
+   - 하나의 코드를 사용하여 다양한 스크린 사이즈를 가진 기기에 앱을 배포할 수 있다.
   
-2. 모든 스크린 사이즈에 배포할 수 있다.
-    - 다양한 스크린 사이즈를 가진 기기에 동일한 앱을 배포할 때, 레이아웃에 대해 고민하지 않아도 된다.
-    - 앱뿐만 아니라, 윈도우, 웹 등 모든 빈 화면이면 모두 flutter로 구현할 수 있다.
+1. 통합 개발 환경 지원
 
-### Why Flutter?
+  - Flutter는 다양한 Editor(Android Studio, VS Code 등)를 사용하여 빌드가 가능하다. Android Studio는 Flutter Inspector와 Flutter Outline 이라는 개발 도구를 지원하고, VS code 에서는 간단하게 Flutter Extension 을 사용하여 Flutter를 사용할 수 있다.
 
-- Flutter: one code base to maintain, one place to debug, and one place to update
-    + language: Dart
-- 스크린 사이즈가 커지면서 한 화면에 더 많은 것들을 담고 있다. 더 복잡하고, 좋은 화면을 만드는 것은 점점 더 어려워진다.
-    + web에서부터 배우자. 웹은 화면이 작아지면 그에 맞게 화면이 최적화되고, 모바일 용, 태블릿 용, PC 용 등 스크린 사이즈에 따라 레이아웃이 쉽게 바뀐다.
-- UI를 변경하는 것이 바로 반영된다. 빠르고 쉬운 확인!
-- Flutter는 open-source로, 코드가 어떻게 구성되어 있는지 모두 확인할 수 있다.
+2. 성능 문제 해결
 
-## The Anatomy of a Flutter app
+   - 기존 React Native 혹은 Hybrid App의 경우 네이티브 브릿지를 통한 통신이 불가피했다. 하지만 Flutter는 직접 컴파일되서 Render를 직접 하기때문에 성능이 빠르다.
 
-다음과 같이 UI들을 배치함으로써 화면을 직관적으로 구성할 수 있다.
+3. Material Design와 Cupertino
 
-- Scaffold
-    - AppBar
-    - Container
-        - Column
-            - Row
-                - Text
-                - Icon
-            - Text
-            - Image
+   - Flutter는 Androd와 iOS의 대표 디자인 가이드를 기본적으로 제공한다. 구글의 Material Design과 iOS의 Cupertino 디자인 시스템을 제공한다.
+
+4. Dart를 사용하지만 Native 코드도 사용
+   
+   - Futter는 Dart를 사용하지만, 크로스 플랫폼이기에 해당 OS에 최적화된 앱을 만들려면 Native 코드를 사용할 수 밖에 없다. 따라서,Dart만 사용하는것이 아니라 Android면 Kotlin, iOS면 Swift도 사용한다. 이는 기존의 Native 코드를 사용한 개발자라면 장점이 된다.
+
+5. Hot reload
+
+    - Flutter에서 가장 유명한 특징은 빠르고 stateful한 Hot reload 기능이다. 앱이 동작하고 있는 동안에도 Flutter 앱에 변경을 반영할 수 있다.
+
+## Useful Materials
+
+- [Flutter API Docs](https://api.flutter.dev/index.html) 페이지에 클래스에 대한 설명이나 사용 방법이 잘 나와 있다.
+- [Material Design](https://material.io/design)에서 다양한 디자인 속성들을 확인하고 사용할 수 있다. 
+- [App Icon](https://appicon.co)에서 App Icon을 쉽게 만들 수 있다.
