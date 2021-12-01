@@ -8,6 +8,7 @@
   * [2021.09](_daily/2021.09.md)
   * [2021.10](_daily/2021.10.md)
   * [2021.11](_daily/2021.11.md)
+  * [2021.12](_daily/2021.12.md)
 
 ### Personal Logs
 
@@ -73,6 +74,7 @@
   * [#1 깨끗한 코드](/clean-code/01_clean-code.md)
   * [#2 의미 있는 이름](/clean-code/02_meaningful-name.md)
   * [#3 함수](/clean-code/03_function.md)
+  * [#4 주석](/clean-code/04_comments.md)
 
 * [Database](database/README.md)
   * [SQL vs. NoSQL 비교](database/sql-vs-nosql.md)
