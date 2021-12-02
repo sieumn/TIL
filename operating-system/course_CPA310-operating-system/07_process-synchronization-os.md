@@ -117,6 +117,74 @@ Eventcount/Sequencer 방법으로 상호 배제 문제를 풀어보자. 프로�
 
 Eventcount/Sequencer 솔루션은 busy waiting 문제가 없고, FIFO 구조를 가지므로 starvation 문제도 없다. 또한, 프로세스 실행 순서를 컨트롤할 수 있게 되면서 semaphore보다 더 low-level control이 가능해졌다.
 
+## Mutual Exclusion Solutions - Language-Level
+
+OS supported SW 솔루션은 유연하다는 장점이 있지만, 구조가 복잡하고 사용이 어렵다. 이렇게 OS 단에서 지원하는 솔루션을 low-level 솔루션이라고 한다. 그렇다면 high-level 솔루션은 무엇일까? high-level 솔루션은 프로그래밍 언어가 문제를 해결해 주는 것이다.
+
+### High-level Mechanism
+
+OS가 아닌 프로그래밍 언어가 상호 배제 문제를 풀어줄 수 있으며, 이것을 High-level 메커니즘이라고 한다. 프로그래밍 언어는 OS보다 훨씬 쉽게 사용할 수 있다.
+  
+### Monitor
+
+Monitor는 공유 데이터(critical data)와 critical section의 집합이다. Monitor에서는 critical section 내부에 최대 한 개의 프로세스만 진입 가능하다.
+
+프로세스들이 monitor의 특정 기능에 접근하기 위해서는 해당 기능의 entry queue(진입 큐)에 먼저 진입해야 한다. 진입 큐는 monitor가 가진 기능의 수만큼 존재한다.
+
+하지만 진입 큐에 접근한다고 해서 바로 monitor 내에 진입할 수 있는 것은 아니다. Monitor 내에 다른 프로세스가 이미 존재한다면, 해당 프로세스는 condition queue(조건 큐)라는 대기방으로 이동하여 대기해야 한다. Monitor 내에 있던 프로세스가 작업을 마치고 monitor를 나올 때, signaler queue(신호 제공자 큐)에 잠시 들러 condition queue에서 sleep 상태로 대기하던 프로세스를 깨워준다. 이러한 방식으로 monitor가 동작한다.
+
+![](images/2021-12-02-06-44-56.png)
+
+### Monitor 구조
+
+Monitor의 주요 구조에 대해 정리하면 다음과 같다.
+
+- Entry queue (진입 큐)
+  + 모니터 내의 procedure(함수) 수만큼 존재
+- Mutual exclusion
+  + 모니터 내에는 항상 하나의 프로세스만 진입 가능하며, 이는 language가 보장한다.
+- Information hiding (정보 은폐)
+  + 공유 데이터는 모니터 내의 프로세스만 접근 가능
+- condition queue (조건 큐)
+  + 모니터 내의 특정 이벤트를 기다리는 프로세스가 대기
+- signaler queue (신호 제공자 큐)
+  + 모니터에 항상 하나의 신호 제공자 큐가 존재
+  + signal() 명령을 실행하기 위해 프로세스가 잠시 대기하는 공간
+
+### 자원 할당 문제
+
+Monitor를 사용하여 풀 수 있는 문제를 몇 가지 살펴보자. 가장 먼저 자원 할당에 대한 문제가 있다.
+
+![](images/2021-12-02-06-51-59.png)
+
+Monitor 내에 'R'이라는 자원이 있고, 한 프로세스씩 R을 사용할 수 있도록 할당하는 문제가 있다고 하자. 그렇다면 monitor 내에는 프로세스가 자원을 요청하는 명령과 자원을 반납하는 명령이 있을 것이다.
+
+기능별로 entry queue가 하나씩 있으므로, 자원을 요청하는 entry queue와 자원을 반납하는 entry queue가 각각 존재한다. 자원을 사용하기 위해 대기하는 condition queue 공간도 있고, condition queue에서 대기하는 프로세스를 깨우기 위해 잠시 진입하는 공간인 signaler queue도 존재할 것이다.
+
+Semaphore 등 OS supported SW에서는 코드가 꽤 복잡했지만, monitor에서는 코드를 구현하는 것이 훨씬 쉽다. 우리가 생각하는 그대로 짜면 된다. 자원 할당 문제를 코드로 구현하면 다음과 같다.
+
+![](images/2021-12-02-06-49-29.png)
+
+### 그 외 다른 문제들
+
+Monitor를 사용하여 다음과 같은 문제들도 풀 수 있다. 시간이 날 때 풀어보자.
+
+#### Producer-Consumer Problem
+
+여러 개의 자원이 있을 때 Circuler-queue를 사용하여 문제를 푸는 방법이다.
+
+![](images/2021-12-02-23-15-26.png)
+
+#### Dining philosopher problem
+
+![](images/2021-12-02-23-15-50.png)
+
+### Monitor 특징
+
+Monitor의 장점은 사용이 쉽다는 것이다. 사용이 쉽기 때문에 실수할 확률이 낮고, 따라서 deadlock 등의 error가 발생할 가능성이 낮다.
+
+하지만, 모든 언어에서 monitor를 사용할 수 있는 것은 아니다. monitor를 지원하는 언어에서만 사용 가능하며, 컴파일러가 OS를 이해하고 있어야 사용할 수 있다.
+
 ## Reference
 
 - [운영체제 강의(김덕수 교수) - Lec 6.](https://youtu.be/33OqgesF-mM)
