@@ -4,7 +4,7 @@
 
 ### Bash Shell 소개
 
-- 명령줄(command line)이란 컴퓨터 시스템에 명령을 입력하는 데 사용하는 텍스트 기반의 인터페이스다. Linux의 명령행은 shell이라는 프로그램에서 제공된다.
+- 명령 줄(command line)이란 컴퓨터 시스템에 명령을 입력하는 데 사용하는 텍스트 기반의 인터페이스다. Linux의 명령행은 shell이라는 프로그램에서 제공된다.
 
 - Red Hat Enterprise Linux(이하 RHEL)에서 사용자의 기본 shell은 GNU Bourne-Again Shell(bash)이며, bash는 UNIX 계열 시스템에 사용되는 가장 성공적인 shell 중 하나인 Bourne Shell(sh)의 향상된 버전이다.
 
@@ -14,7 +14,7 @@
     [user@host ~]$
     ```
 
-- Shell이 root 사용자로서 실행되는 경우에는 $ 문자가 # 문자로 바뀌어 표시된다. 이렇게 하면 root shell임을 쉽게 알 수 있다.
+- Shell이 root 사용자로서 실행되는 경우에는 $ 문자가 # 문자로 바뀌어 표시된다. 이렇게 하면 root shell 임을 쉽게 알 수 있다.
 
     ```bash
     [user@host ~]#
@@ -38,7 +38,7 @@
   
 - Linux나 Unix는 multi-user system이다. 즉, 하나의 linux 서버에 다수의 사용자가 접속하는 것이 가능하다. multi-user system을 이용하면 가상 콘솔 1에는 root 계정으로 접속하고, 가상 콘솔 2에는 사용자 계정으로 접속하는 등의 상황을 만들 수 있다.
 
-- tty는 표준 출력에 해당하는 터미널의 장치 이름을 출력해주는 명령어다. 일반적으로 현재 사용 중인 터미널의 파일명을 확인할 때 사용한다. 만약 tty 명령어를 입력했을 때 'tty1'이라는 결과값이 나왔다면, 현재 첫 번째 가상 콘솔을 사용하고 있다는 뜻이다.
+- tty는 표준 출력에 해당하는 터미널의 장치 이름을 출력해 주는 명령어다. 일반적으로 현재 사용 중인 터미널의 파일명을 확인할 때 사용한다. 만약 tty 명령어를 입력했을 때 'tty1'이라는 결과값이 나왔다면, 현재 첫 번째 가상 콘솔을 사용하고 있다는 뜻이다.
 
 ### 네트워크를 통한 로그인 - SSH
 
@@ -96,7 +96,7 @@
 
 ### 공개 키 공유
 
-- 생성한 공개 키를 원하는 대상 시스템에 복사해보자. 공개키 복사에는 ssh-copy-id 라는 명령이 사용된다.
+- 생성한 공개 키를 원하는 대상 시스템에 복사해 보자. 공개키 복사에는 ssh-copy-id 라는 명령이 사용된다.
 
     ```bash
     # <PUB_KEYNAME.pub> 파일을 다른 user에게 전달
@@ -105,7 +105,7 @@
 
 - 공개 키를 복사하고 나면, 사용자는 해당 콘솔에 별도의 콘솔 암호 입력 없이 로그인할 수 있다. 개인 키에 암호가 설정되어 있을 경우, 개인 키 암호를 입력하여 접속이 가능하다.
 
-- 만약 한 번에 여러 서버에 공개 키를 공유하고 싶다면, 다음과 같이 명령어를 사용해볼 수 있다.
+- 만약 한 번에 여러 서버에 공개 키를 공유하고 싶다면, 다음과 같이 명령어를 사용해 볼 수 있다.
 
     ```bash
     $ for host in node1 node2 node3 node4 node5 ; do ssh-copy-id -o StrictHostKeyChecking=no root@$host ;
@@ -127,7 +127,7 @@
 - ssh-agent가 실행 중이라면, ssh-add 명령어를 사용하여 개인 키에 대한 암호를 저장할 수 있다.
 
     ```bash
-    # 별도 경로가 없을경우 /.ssh/id_rsa 파일을 사용한다.
+    # 별도 경로가 없을 경우 /.ssh/id_rsa 파일을 사용한다.
     [user@host ~]$ ssh-add
     Identity added
 
@@ -148,4 +148,3 @@
     [user@host ~]$ ssh -i .ssh/key-with-pass user@remotehost
     [user@remostehost ~]$
     ```
-
