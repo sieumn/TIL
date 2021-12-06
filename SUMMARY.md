@@ -76,11 +76,6 @@
   * [#3 함수](/clean-code/03_function.md)
   * [#4 주석](/clean-code/04_comments.md)
 
-* [Database](database/README.md)
-  * [SQL vs. NoSQL 비교](database/sql-vs-nosql.md)
-  * [RDBMS: SQLite 알아보기](database/sql-sqlite.md)
-  * [RDBMS: MySQL 알아보기](database/sql-mysql.md)
-
 * [Git](git/README.md)
   * [Git 시작하기: 개념, 명령어](git/01_git_getting_started.md)
   * [Git add 취소, commit 취소, push 취소](git/02_git_how_to_revert.md)
@@ -93,7 +88,7 @@
   * [#2 Flutter 설치](flutter/02_flutter-installation.md)
   * [#3 Flutter 간단한 화면 구성하기](flutter/03_flutter-from-scratch.md)
 
-### Computer Science
+### System
 
 * [Operating System](operating-system/course_CPA310-operating-system/README.md)
   * [#1 컴퓨터 시스템 개요](operating-system/course_CPA310-operating-system/01_computer-system-overview.md)
@@ -103,6 +98,15 @@
   * [#5 프로세스 스케줄링](operating-system/course_CPA310-operating-system/05_process-scheduling.md)
   * [#6 프로세스 동기화와 상호 배제 (1)](operating-system/course_CPA310-operating-system/06_process-synchronization.md)
   * [#6 프로세스 동기화와 상호 배제 (2)](operating-system/course_CPA310-operating-system/07_process-synchronization-os.md)
+
+* [Red Hat Linux](operating-system/course_redhat-linux/README.md)
+  * [#1 Linux 시스템 접속하기](operating-system/course_redhat-linux/01_linux-system-access.md)
+  * [#2 Linux 파일 시스템](operating-system/course_redhat-linux/02_linux-file-system.md)
+
+* [Database](database/README.md)
+  * [SQL vs. NoSQL 비교](database/sql-vs-nosql.md)
+  * [RDBMS: SQLite 알아보기](database/sql-sqlite.md)
+  * [RDBMS: MySQL 알아보기](database/sql-mysql.md)
 
 ### Virtualization
 
