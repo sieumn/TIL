@@ -102,6 +102,7 @@
 * [Red Hat Linux](operating-system/course_redhat-linux/README.md)
   * [#1 Linux 시스템 접속하기](operating-system/course_redhat-linux/01_linux-system-access.md)
   * [#2 Linux 파일 시스템](operating-system/course_redhat-linux/02_linux-file-system.md)
+  * [#4 Linux 파일 시스템 권한 관리](/operating-system/course_redhat-linux/04_linux-file-access.md)
 
 * [Database](database/README.md)
   * [SQL vs. NoSQL 비교](database/sql-vs-nosql.md)
