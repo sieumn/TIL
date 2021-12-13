@@ -1,4 +1,4 @@
-# #1 Kubernetes Overview
+# #2 Kubernetes Overview
 
 ### Kubernetes Overview
 
@@ -111,3 +111,4 @@ Kubernetes는 다양한 component들로 구성되어 있다.
 #### docker (worker node)
 
 - docker(containerd)가 위치하며, kubelet의 요청에 의해 컨테이너를 생성한다.
+  
