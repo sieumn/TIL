@@ -25,23 +25,28 @@
 ### Container Runtime Component
 
 #### kubelet
+
 - kube-api server로부터 명령을 받아 cri-o, containerd, dockerd 와 같은 CRI 서비스를 호출한다. 이때, gRPC 등의 CRI API를 사용하여 CRI 서비스를 호출할 수 있다.
 
 #### dockerd
+
 - docker client(명령어)에 대응하는 서버 프로세스이다.
 - docker client로부터 명령어를 받으면 dockerd는 명령에 따라 containerd를 제어한다. dockerd는 containerd에 의존하므로 dockerd를 실행하려면 container가 먼저 실행되어야 한다.
 
 #### containerd
+
 - containerd-shim 들의 부모 프로세스
 - containerd는 high-level 런타임으로, runc를 호출하여 컨테이너를 구동하는 역할을 한다.
 - containerd는 dockerd와 독립적으로 실행될 수 있다.
 
 #### containerd-shim
+
 - 컨테이너 내 PID 1 프로세스들의 부모 프로세스
 - shim 이란 벽돌을 일정한 간격으로 배열하기 위해 사이에 끼우는 끼운 쇠를 의미하며, container-shim은 containerd와 container(PID 1) 사이에 간격을 유지하는 데 사용된다.
 - 컨테이너의 실행 및 상태 조회 등의 기능을 수행한다. runc를 이용하여 컨테이너를 생성하고, 생성 완료된 컨테이너의 부모 프로세스가 된다. 컨테이너가 종료되면 종료 상태를 보고한다.
 
 #### runc
+
 - runc는 low-level 런타임으로, cgroup, namespace 등을 호출하여 컨테이너를 직접 구동한다.
 - Docker, CRI-O 등에 의해 호출되어 사용된다.
 
