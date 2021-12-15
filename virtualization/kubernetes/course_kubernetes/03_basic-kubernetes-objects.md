@@ -252,7 +252,7 @@ spec:
     - containerPort: 80
 ```
 
-#### Lable Selector
+#### Label Selector
 
 - 사용자는 레이블 셀렉터를 통해 오브젝트를 식별하고 선택할 수 있으며, 레이블 셀렉터는 쿠버네티스 코어 그룹의 기본이 된다.
 - 레이블 셀렉터는 다음과 같이 레이블의 key와 value의 필터링을 허용한다.
