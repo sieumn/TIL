@@ -111,4 +111,114 @@ Kubernetes는 다양한 component들로 구성되어 있다.
 #### docker (worker node)
 
 - docker(containerd)가 위치하며, kubelet의 요청에 의해 컨테이너를 생성한다.
+
+#### Typical Kubernetes Workflow Example
+
+Kubernetes 에서 컨테이너를 생성하는 것은 다음 흐름으로 동작한다.
+
+![](images/2021-12-15-15-12-26.png)
+
+1. kubectl: 소스 코드와 의존성으로부터 이미지 build
+2. kubectl: image registry에 이미지 저장
+3. kubectl: kkubernetes apiserver에 이미지 및 pod 생성 요청 api 전송
+4. apiServer: scheduler가 pod가 실행될 node를 선정하고, 해당 node로 명령어 전달
+5. kubelet: pod 생성 명령 승인
+6. docker: image registry로부터 이미지를 가져와 pod 내에 컨테이너 생성
+
+### Kubernetes kubectl CLI
+
+#### API: REST
+
+- Kubernetes의 모든 내부, 외부 컴포넌트들은 REST JSON-based API를 통해 통신한다.
+
+#### API: CLI
+
+- Kubernetes에서 사용하는 API를 위한 command-line interface를 kubectl이라고 부르며, kubectl은 Kubernetes cluster를 관리하기 위해 사용된다.
+- kubectl은 명령어에 따른 적절한 REST API를 호출하며, kubectl에 전달된 yaml 파일을 JSON 파일로 변환하여 API에 넘겨준다.
+- kubectl client 버전과 Kubernetes API 서비스 버전의 호환성이 맞아야 kubectl을 사용할 수 있다.
+
+### Kubectl commaands
+
+#### kubectl --help
+
+- `kubectl --help` 명령어를 입력하면 kubectl 전체 명령어에 대한 설명을 볼 수 있다.
+
+#### kubectl get
+
+- `kubectl get`은 선택된 네임스페이스에 있는 객체에 대한 정보를 반환하는 명령어다.
+
+    ```bash
+    kubectl get pod <pod_name>
+    kubectl get pods --all-namespaces   # 모든 namespace에서 검색
+    ```
+
+- 특정 네임스페이스를 선택하지 않으면 현재 활성화된 네임스페이스를 기준으로 조회한다. 네임스페이스는 다음과 같이 조회하거나 변경할 수 있다.
+
+    ```bash
+    kubectl config get-contexts   # 사용가능한 네임스페이스 리스트 조회
+    kubectl config use-context <namespace>   # 활성 네임스페이스 변경
+    ```
+
+- `kubectl get nodes`를 사용하면 클러스터에 있는 노드 정보를 확인할 수 있다.
+
+    ```bash
+    kubectl get nodes -o wide   ## 자세한 정보 조회
+    ```
+
+- `kubectl get events`를 사용하면 클러스터에서 발생한 이벤트 로그 기록을 확인할 수 있다. 이벤트 로그는 troubleshooting에 도움이 되며, 기본적으로 1시간 저장된다.
+
+    ```bash
+    kubectl get events
+    ```
+
+#### kubectl describe
+
+- `kubectl describe`는 객체에 대한 더 자세한 정보를 반환하는 명령어다. describe 결과는 객체가 발생한 이벤트 로그까지 포함한다.
   
+    ```bash
+    kubectl describe pod <pod_name>
+    ```
+
+#### kubectl apply
+
+- `kubectl apply`는 yaml 파일의 내용을 적용하여 리소스를 생성하거나 업데이트하는 명령어다. 
+
+    ```bash
+    kubectl apply -f [ <file> | <dir> | <url> ]
+    ```
+
+#### kubectl create/replace/edit/patch
+
+선언형이 아닌 명령형으로 리소스를 생성하거나 업데이트를 할 때는 다음 명령어가 사용된다.
+
+- `kubectl create`: 파일로부터 새로운 리소스 생성
+- `kubectl replace`: 파일로부터 기존 리소스 업데이트
+- `kubectl edit`: editor를 사용하여 기존 리소스 업데이트
+- `kubectl patch`: code snippet을 병합함으로써 기존 리소스 업데이트
+
+#### kubectl delete
+
+- `kubectl delete`는 리소스를 삭제하는 명령어다.
+  
+    ```bash
+    kubectl delete pod <pod_name>
+    ```
+
+#### kubectl logs
+
+- `kubectl logs`는 Pod 내의 컨테이너의 로그를 출력해준다.
+
+    ```bash
+    kubectl logs <pod_namae>
+    ```
+
+- 만약 pod에 하나 이상의 컨테이너가 있다면, -c 옵션을 사용하여 컨테이너를 특정할 수 있다.
+
+    ```bash
+    kubectl logs <pod_namae> -c <container_name>
+    ```
+
+### Reference
+
+- [Kubernetets Documentation](https://kubernetes.io/ko/docs/)
+- Kubernetes Fundamentals and Cluster Operations Lecture notes

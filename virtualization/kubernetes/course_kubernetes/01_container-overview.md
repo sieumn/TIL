@@ -116,3 +116,6 @@
 - `docker exec`: 컨테이너에 명령 전달
 - `docker network`: 네트워크 생성
 
+### Reference
+
+- Kubernetes Fundamentals and Cluster Operations Lecture notes

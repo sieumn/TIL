@@ -123,6 +123,9 @@
   * [[번역] KubeVirt 시작하기](virtualization/kubernetes/kubevirt-getting-to-know.md)
   * [#1 Container Overview](virtualization/kubernetes/course_kubernetes/01_container-overview.md)
   * [#2 Kubernetes Overview](virtualization/kubernetes/course_kubernetes/02_kubernetes-overview.md)
+  * [#3 Basic Kubernetes Objects](virtualization/kubernetes/course_kubernetes/03_basic-kubernetes-objects.md)
+  * [#4 Deployment Management](virtualization/kubernetes/course_kubernetes/04_deployment-management.md)
+  * [#5 Container Configuration](virtualization/kubernetes/course_kubernetes/05_container-configuration.md)
 
 * [AWS Windows 서버 사용하기](virtualization/aws/README.md)
   * [#1 AWS 무료 Windows 서버 생성하기](virtualization/aws/01_create-EC2-server.md)
