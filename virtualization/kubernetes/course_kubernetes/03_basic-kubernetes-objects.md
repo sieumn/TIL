@@ -11,9 +11,9 @@
 
 ### Object Spec
 
-- 오브젝트 spec은 Kubernetes의 menifest 파일으로, yaml 형식으로 작성된다.
+- 오브젝트 spec은 Kubernetes의 menifest 파일로, yaml 형식으로 작성된다.
 - spec은 오브젝트의 바라는 상태를 명시하고 있으며, 해당 manifest가 적용되면 Kubernetes는 manifest에 명시된 상태를 유지한다.
-- spec은 크게 apiVersion, kind, metadata, spec 의 4 부분으로 구성된다.
+- spec은 크게 apiVersion, kind, metadata, spec의 4 부분으로 구성된다.
 
     ```yaml
     apiVersion: apps/v1
@@ -39,13 +39,13 @@
 
     + apiVersion: 이 오브젝트를 생성하기 위해 사용하고 있는 쿠버네티스 API 버전이 어떤 것인지
     + kind: 어떤 종류의 오브젝트를 생성하고자 하는지
-    + metadata: 이름, UID, 네임스페이스 등 오브젝트를 유일하게 구분지어 줄 데이터
+    + metadata: 이름, UID, 네임스페이스 등 오브젝트를 유일하게 구분 지어 줄 데이터
     + spec: 오브젝트에 대해 어떤 상태를 의도하는지
 
 ## Pods
 
 - Pod는 Kubernetes에서 생성하고 관리할 수 있는 배포 가능한 가장 작은 컴퓨팅 단위이다.
-- Pod는 하나 이상의 컨테이너의 그룹이다. 이 그룹은 스토리지 및 네트워크를 공유하고, 해당 컨테이너를 구동하는 방식에 대한 명세를 갖는다. Pod의 콘텐츠는 항상 함께 배치되고, 함께 스케줄되며, 공유 context에서 실행된다.
+- Pod는 하나 이상의 컨테이너의 그룹이다. 이 그룹은 스토리지 및 네트워크를 공유하고, 해당 컨테이너를 구동하는 방식에 대한 명세를 갖는다. Pod의 콘텐츠는 항상 함께 배치되고, 함께 스케줄 되며, 공유 context에서 실행된다.
 
 ### Pod와 Container
 
@@ -61,7 +61,7 @@
 - 여러 컨테이너들이 밀접하게 결합되어 있고 리소스를 공유해야 하는 경우에는 여러 컨테이너를 하나의 Pod에 결합할 수 있다.
 - 이렇게 함께 배치된 컨테이너는 하나의 결합된 서비스 단위를 형성한다. 예를 들어, 하나의 컨테이너는 공유 볼륨에 저장된 데이터를 퍼블릭에 제공하는 역할을 하고, 별도의 사이드카 컨테이너는 해당 파일을 새로 고치거나 업데이트하는 등 결합된 역할을 수행한다.
 - Pod는 컨테이너, 스토리지 리소스, 임시 네트워크 ID를 단일 단위로 함께 캡슐화한다.
-- 일부 Pod에는 앱 컨테이너 뿐만 아니라 초기화 컨테이너도 포함되어 있다. 초기화 컨테이너는 앱 컨테이너가 시작되기 전에 실행되고 완료되는 컨테이너다.
+- 일부 Pod에는 앱 컨테이너뿐만 아니라 초기화 컨테이너도 포함되어 있다. 초기화 컨테이너는 앱 컨테이너가 시작되기 전에 실행되고 완료되는 컨테이너다.
 
     ![](images/2021-12-15-12-34-33.png)
 
@@ -101,10 +101,10 @@ spec:
 ## Deployment
 
 - Deployment는 Pod와 ReplicaSet에 대한 선언적 업데이트 기능을 제공한다.
-  + Deployment Controller는 현재 상태에서 업데이트 하고자 하는 상태로 비율을 조정하며 순차적으로 업데이트하는 rolling update 기능을 제공한다.
+  + Deployment Controller는 현재 상태에서 업데이트하고자 하는 상태로 비율을 조정하며 순차적으로 업데이트하는 rolling update 기능을 제공한다.
   + downtime 없이 이미지 업데이트를 가능하게 한다.
-- Deployment은 하나의 manifest 파일으로 Pod와 ReplicaSet 선언을 모두 할 수 있다.
-- Deployment에서 업데이트되는 버전은 모두 저장되어 있으며, 현재 상태가 안정적이지 않은 경우 Deployment의 이전 버전으로 롤백할 수 있다.
+- Deployment은 하나의 manifest 파일로 Pod와 ReplicaSet 선언을 모두 할 수 있다.
+- Deployment에서 업데이트되는 버전은 모두 저장되어 있으며, 현재 상태가 안정적이지 않은 경우 Deployment의 이전 버전으로 롤백 할 수 있다.
 
 ### deployment.yaml 파일 예시
 
