@@ -33,7 +33,7 @@
 
 - Kubernetes는 전체 Pod의 phase뿐 아니라, pod 내부의 각 컨테이너의 상태도 추적한다.
 - 파드 내의 각 컨테이너의 상태는 `kubectl describe pod <pod_name>` 명령어를 사용하여 확인할 수 있다.
-- 스케줄러가 node에 pod를 할당하면, kubelet은 container runtime을 사용하여 컨테이너 생성을 시작한다. 이 때 표현될 수 있는 컨테이너의 상태는 3가지로 다음과 같다.
+- 스케줄러가 node에 pod를 할당하면, kubelet은 container runtime을 사용하여 컨테이너 생성을 시작한다. 이때 표현될 수 있는 컨테이너의 상태는 3가지로 다음과 같다.
 
 ### Waiting
 
@@ -42,7 +42,7 @@
 
 ### Running
 
-- `Running` 상태는 컨테이너가 문제 없이 실행되고 있음을 나타낸다.
+- `Running` 상태는 컨테이너가 문제없이 실행되고 있음을 나타낸다.
 - kubectl을 사용하여 해당 컨테이너가 running 상태에 진입한 시기를 확인할 수 있다.
 
 ### Terminated
@@ -65,18 +65,18 @@ kubelet은 실행 중인 컨테이너들에 대해 3가지 종류의 Probe를 �
 
 #### livenessProbe
 
-- 컨테이너가 동작 중인지 여부를 진단한다.
+- 컨테이너가 동작 중인지를 진단한다.
 - livenessProbe에 실패하면 kubelet은 컨테이너를 죽이고, 해당 컨테이너는 재시작 정책에 따라 동작한다.
 
 #### readinessProbe
 
-- 컨테이너가 요청을 처리할 준비가 되어 있는지 여부를 진단한다.
+- 컨테이너가 요청을 처리할 준비가 되어 있는지를 진단한다.
 - probe가 성공한 경우에만 pod에 트래픽 전송을 시작하려고 한다면 readinessProbe를 지정해야 한다.
-- readinessProbe에 실패하면 엔드포인트 컨트롤러는 pod에 연관된 모든 서비스들의 엔드 포인트에서 pod의 IP 주소를 제거한다.
+- readinessProbe에 실패하면 엔드 포인트 컨트롤러는 pod에 연관된 모든 서비스들의 엔드 포인트에서 pod의 IP 주소를 제거한다.
 
 #### startupProbe
 
-- 컨테이너 내의 애플리케이션이 시작되었는지 여부를 진단한다.
+- 컨테이너 내의 애플리케이션이 시작되었는지를 진단한다.
 - startupProbe가 주어진 경우, startupProbe가 성공할 때까지 다른 probe들은 활성화되지 않는다.
 - startupProbe는 서비스를 시작하는 데 오래 걸리는 컨테이너가 있는 pod에서 유용하다. 활성 간격을 길게 설정하는 대신, startupProbe를 설정하면 더 긴 시간을 안전하게 허용할 수 있다.
 - startupProbe에 실패하면 kubelet은 컨테이너를 죽이고, 해당 컨테이너는 재시작 정책에 따라 동작한다.
@@ -87,7 +87,7 @@ Probe 결과로는 다음 셋 중 하나의 값을 가진다.
 
 - `Success`: 컨테이너가 진단을 통과
 - `Failure`: 컨테이너가 진단에 실패
-- `Unknown`: 진단 자체가 실패하여 아무런 액션도 수행되면 안됨
+- `Unknown`: 진단 자체가 실패하여 아무런 액션도 수행되면 안 됨
 
 ### Probe Handlers
 
@@ -154,4 +154,5 @@ spec:
 
 ## Reference
 
-- [Kubernetets Documentation](https://kubernetes.io/ko/docs/concepts/workloads/pods/pod-lifecycle/)
+- [Kubernetets Documentation](https://kubernetes.io/ko/docs/)
+- Kubernetes Fundamentals and Cluster Operations Lecture notes
