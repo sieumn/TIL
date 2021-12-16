@@ -227,5 +227,5 @@ Kubernetes 에서 컨테이너를 생성하는 것은 다음 흐름으로 동작
 
 ## Reference
 
-- [Kubernetets Documentation](https://kubernetes.io/ko/docs/)
+- [Kubernetes Documentation](https://kubernetes.io/ko/docs/)
 - Kubernetes Fundamentals and Cluster Operations Lecture notes
