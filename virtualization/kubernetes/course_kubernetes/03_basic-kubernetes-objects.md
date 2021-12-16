@@ -305,5 +305,5 @@ nodeSelector:
 
 ## Reference
 
-- [Kubernetets Documentation](https://kubernetes.io/ko/docs/)
+- [Kubernetes Documentation](https://kubernetes.io/ko/docs/)
 - Kubernetes Fundamentals and Cluster Operations Lecture notes
