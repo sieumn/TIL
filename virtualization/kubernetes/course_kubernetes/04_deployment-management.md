@@ -70,7 +70,7 @@
 
 ## Reference
 
-- [Kubernetets Documentation](https://kubernetes.io/ko/docs/)
+- [Kubernetes Documentation](https://kubernetes.io/ko/docs/)
 - Kubernetes Fundamentals and Cluster Operations Lecture notes
 - [배포 전략: Rolling, Blue/Green, Canary](https://onlywis.tistory.com/10)
 - [Intro to deployment strategies: blue-green, canary, and more](https://dev.to/mostlyjason/intro-to-deployment-strategies-blue-green-canary-and-more-3a3)
