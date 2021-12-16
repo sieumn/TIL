@@ -185,6 +185,6 @@ spec:
 
 ## Reference
 
-- [Kubernetets Documentation - Service](https://kubernetes.io/ko/docs/concepts/services-networking/service/)
-- [Kubernetets Documentation - Ingress](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/)
+- [Kubernetes Documentation - Service](https://kubernetes.io/ko/docs/concepts/services-networking/service/)
+- [Kubernetes Documentation - Ingress](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/)
 - Kubernetes Fundamentals and Cluster Operations Lecture notes
