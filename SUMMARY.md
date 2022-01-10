@@ -19,7 +19,7 @@
   * [시스템 트레이딩 개발](_experience/system-trading/README.md)
     * [#0 오늘 스터디에서 배운 것 (TIL)](_experience/system-trading/00_meeting_til.md)
     * [#1 아키텍처는 뭐고 난 누구인가](_experience/system-trading/01_week1_log.md)
-    * [#2 MAC 에서 증권사 API 사용하기](_experience/system-trading/02_week2_log.md)
+    * [#2 MAC 에서 증권사 API 사용하기](_experiene/system-trading/02_week2_log.md)
     * [#3 개발 스터디 첫 코드 리뷰 회고](_experience/system-trading/03_week3_log.md)
 
 * [Inspiration](_personal/inspiration-note/README.md)
@@ -30,6 +30,7 @@
 * [Language](language/README.md)
   * [Python](language/python/README.md)
     * [Python Code Style](language/python/python_code_style.md)
+    * [Python SQLite3 모듈 사용하기](language/python/python-sqlite3-module.md)
   * [GoLang](language/golang/README.md)
     * [GoLang(Go언어) 온라인 학습 자료](language/golang/how-to-start-golang.md)
 
