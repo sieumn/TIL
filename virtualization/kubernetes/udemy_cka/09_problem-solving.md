@@ -2,6 +2,276 @@
 
 > Udemy의 CKA with Practical Test 강의에 포함된 문제 풀이 정리
 
+## Lightening Lab
+
+1. Upgrade the current version of kubernetes from `1.19` to `1.20.0` exactly using the `kubeadm` utility. Make sure that the upgrade is carried out one node at a time starting with the master node. To minimize downtime, the deployment `gold-nginx` should be rescheduled on an alternate node before upgrading each node.
+    
+    Upgrade `controlplane` node first and drain node `node01` before upgrading it. Pods for `gold-nginx` should run on the `controlplane` node subsequently.
+    
+- Answer
+  + 아래 링크에 자세히 나와있다.
+  + [https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/](https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
+    
+2. Print the names of all deployments in the `admin2406` namespace in the following format:
+    
+    `DEPLOYMENT  CONTAINER_IMAGE  READY_REPLICAS  NAMESPACES`
+
+    `<deployment name>  <container image used>  <ready replica count>  <namespace>`.
+
+    The data should be sorted by the increasing order of the deployment name.
+
+    Write the result to the file `/opt/admin2406_data`.
+    
+- Answer
+  
+    ```bash
+    kubectl get deployments -n admin2406 \
+        -o custom-columns=DEPLOYMENT:.metadata.name,\
+        CONTAINER_IMAGE:.spec.template.spec.containers[*].name,\
+        READY_REPLICAS:.status.readyReplicas,\
+        NAMESPACES:.metadata.namespace\
+        --sort-by=.metadata.name \
+        > /opt/admin2406_data
+    ```
+        
+    
+3. A kubeconfig file called `admin.kubeconfig` has been created in `/root/CKA`. There is something wrong with the configuration. Troubleshoot and fix it.
+
+- Answer
+  + server url에서 포트 번호를 6443으로 수정
+        
+    
+4. Create a new delpoyment called `nginx-deploy`, with image `nginx:1.16` and `1` replica. Next upgrade the deployment to version `1.17` using `rolling update`.
+
+- Answer
+  
+    ```bash
+    kubectl create deployment nginx-deploy --image=nginx:1.16 --replicas=1
+
+    kubectl set image deployment nginx-deploy nginx=nginx:1.17 --record
+    ```
+        
+    
+5. A new deployment called `alpha-mysql` has been deployed in the `alpha` namespace. However, the pods are not running. Troubleshoot and fix the issue. The deployment should make use of the persistent volume `alpha-pv` to be mounted at `/var/lib/mysql` and should use the environment variable `MYSQL_ALLOW_EMPTY_PASSWORD=1` to make use of an empty root password.
+    
+    Important: Do not alter the persistent volume.
+    
+- Answer
+  
+    ```yaml
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    metadata:
+    name: mysql-alpha-pvc
+    namespace: alpha
+    spec:
+    resources:
+        requests:
+        storage: 1Gi
+    accessModes:
+    - ReadWriteOnce
+    storageClassName: slow  
+    ```
+        
+    
+6. Take the backup of ETCD at the location `/opt/etcd-backup.db` on the `controlplane` node.
+
+- Answer
+
+    ```bash
+    ETCDCTL_API=3 etcdctl snapshot save /opt/etcd-backup.db \
+        --cacert="CA_CERT.crt" \
+        --cert="CERT.crt" \
+        --key="KEY.key"
+    ```
+        
+
+7. Create a pod called `secret-1401` in the `admin1401` namespace using the `busybox` image. The container within the pod should be called `secret-admin` and should sleep for `4800` seconds.
+    
+    The container should mount a `read-only` secret volume called `secret-volume` at the path `/etc/secret-volume`. The secret being mounted has already been created for you and is called `dotfile-secret`.
+    
+- Answer
+        
+```bash
+kubectl run secret-1401 -n admin1401 --image=busybox \
+    --dry-run=client -o yaml > pod.yaml
+
+vi pod.yaml
+```
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+    name: secret-1401
+    namespace: admin1401
+spec:
+    containers:
+    - name: secret-admin
+    image: busybox
+    command: ["sleep", "4800"]
+    volumeMounts:
+    - name: secret-volume
+        mountPath: "/etc/secret-volume"
+        readOnly: true
+    volmes:
+    - name: secret-volume
+    secrets:
+        secretName: dotfile-secret 
+```
+        
+
+## Mock Test 1
+
+1. Deploy a pod named `nginx-pod` using the `nginx:alpine` image.
+
+- Answer
+
+    ```bash
+    kubectl run nginx-pod --image=nginx:alpine
+    ```
+        
+
+2. Deploy a `messaging` pod using the `redis:alpine` image with the labels set to `tier=msg`.
+
+   - Pod Name: messaging
+   - Image: redis:alpine
+   - Labels: tier=msg
+
+- Answer
+   
+    ```bash
+    kubectl run messaging --image=redis:alpine --labels="tier=msg"
+    ```
+        
+3. Create a namespace named `apx-x9984574`.
+
+   - Namespace: apx-x9984574
+
+- Answer
+   
+    ```bash
+    kubectl create ns apx-x9984574
+    ```
+   
+
+4. Get the list of nodes in JSON format and store it in a file at `/opt/outputs/nodes-z3444kd9.json`.
+
+- Answer
+  
+    ```bash
+    kubectl get ndoes -o json > /opt/outputs/nodes-x3444kd9.json
+    ```
+        
+5. Create a service `messaging-service` to expose the `messaging` application within the cluster on port `6379`.
+    
+    *Use Imperative commands.*
+    
+   - Service: messaging-service
+   - Port: 6379
+   - Type: ClusterIP
+   - User the right labels
+
+- Answer
+   
+    ```bash
+    kubectl expose pod messaging --name=messaging-service --port=6379 --type=ClusterIP
+    ```
+        
+6. Create a deployment named `hr-web-app` using the image `kodekloud/webapp-color` with `2` replicas.
+
+   - Name: hr-web-app
+   - Image: kodekloud/webapp-color
+   - Replicas: 2
+
+- Answer
+   
+    ```bash
+    kubectl create deploy hr-web-app --image=kodekloud/webapp-color --replicas=2
+    ```
+        
+7. Create a static pod named `static-busybox` on the controlplane node that uses the `busybox` image and the command `sleep 1000`.
+
+   - Name: static-busybox
+   - Image: busybox
+
+- Answer
+   
+    ```bash
+    kubectl run static-busybox --image=busybox \
+                --dry-run=client -o yaml --command -- sleep 1000 \
+                > /etc/kubernetes/manifests/static-busybox.yaml
+    ```
+        
+8. Create a POD in the `finance` namespace named `temp-bus` with the image `redis:alpine`.
+
+   - Name: temp-bus
+   - Image name: redis:alpine
+
+- Answer
+   
+    ```bash
+    kubectl run temp-bus --image=redis:alpine -n finance
+    ```
+        
+9.  A new application `orange` is deployed. There is something wrong with it. Identify and fix the issue.
+
+- Answer
+  + initContainer command 에서 sleep 오타 수정
+    
+10.  Expose the `hr-web-app` as service `hr-web-app-service` application on port `30082` on the nodes on the cluster. The web application listens on port `8080`.
+
+     - Name: hr-web-app-service
+     - Type: NodePort
+     - Endpoints: 2
+     - Port: 8080
+     - NodePort: 30082
+
+- Answer
+   
+    ```bash
+    kubectl expose deploy hr-web-app --name=hr-web-service \
+        --type=NodePort --port=8080 --dry-run=client -o yaml \
+        > service.yaml
+
+    vi service.yaml
+    # spec.ports 에서 nodePort: 30082 항목 추가
+    ```
+        
+11. The JSON PATH query to retrieve the `osImage`s of all the nodes and store it in a file `/opt/outputs/nodes_os_x43kj56.txt`.
+    
+    The `osImage`s are under the `nodeInfo` section under `status` of each node.
+
+- Answer
+    
+    ```bash
+    kubectl get nodes -o=jsonpath={'.items[*].status.nodeInfo.osImage'} \
+                            > /opt/outputs/nodes_os_x43kj56.txt
+    ```
+        
+12. Create a `Persistent Volume` with the given specification.
+    
+    - Volume Name: pv-analytics
+    - Storage: 100Mi
+    - Access Modes: ReadWriteMany
+    - Host Path: /pv/data-analytics
+
+- Answer
+  
+    ```yaml
+    apiVersion: v1
+    kind: PersistentVolume
+    metadata:
+    name: pv-analytics
+    spec:
+    capacity:
+        storage: 100Mi
+    accessModes:
+    - ReadWriteMany
+    hostPath:
+        path: "pv/data-analytics"
+    ```
+
 ## Mock Test 2
 
 1. Take a backup of the etcd cluster and save it to /opt/etcd-backup.db
