@@ -31,7 +31,7 @@
 ### dockerd
 
 - docker client(명령어)에 대응하는 서버 프로세스이다.
-- docker client로부터 명령어를 받으면 dockerd는 명령에 따라 containerd를 제어한다. dockerd는 containerd에 의존하므로 dockerd를 실행하려면 container가 먼저 실행되어야 한다.
+- docker client로부터 명령어를 받으면 dockerd는 명령에 따라 containerd를 제어한다. dockerd는 containerd에 의존하므로 dockerd를 실행하려면 containerd가 먼저 실행되어야 한다.
 
 ### containerd
 

@@ -217,7 +217,7 @@ spec:
 
 - CronJob은 주어진 일정에 따라 주기적으로 job을 동작시키는 오브젝트다.
 - CronJob은 백업, 리포트 생성 등 정기적인 작업을 수행하기 위해 사용된다.
-- CronJob 스케줄은 timezone 처리를 지원하므로, 스케줄ㄹ 시작 부분에 "CRON_TZ="을 설정하는 것을 권장한다.
+- CronJob 스케줄은 timezone 처리를 지원하므로, 스케줄 시작 부분에 "CRON_TZ="을 설정하는 것을 권장한다.
 
 ### CronJob example
 

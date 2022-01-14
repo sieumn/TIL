@@ -176,7 +176,7 @@ volumeBindingMode: Immediate
 
 #### allowVolumeExpansion
 
-- PV는 volume을 확ㅈ아하도록 구성할 수 있다. 이 기능을 true로 설정하면 해당 PVC를 편집하여 volume 크기를 조정할 수 있다.
+- PV는 volume을 확장하도록 구성할 수 있다. 이 기능을 true로 설정하면 해당 PVC를 편집하여 volume 크기를 조정할 수 있다.
 
 #### mountOptions
 

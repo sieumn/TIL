@@ -11,7 +11,7 @@
 
 ### Object Spec
 
-- 오브젝트 spec은 Kubernetes의 menifest 파일로, yaml 형식으로 작성된다.
+- 오브젝트 spec은 Kubernetes의 manifest 파일로, yaml 형식으로 작성된다.
 - spec은 오브젝트의 바라는 상태를 명시하고 있으며, 해당 manifest가 적용되면 Kubernetes는 manifest에 명시된 상태를 유지한다.
 - spec은 크게 apiVersion, kind, metadata, spec의 4 부분으로 구성된다.
 
@@ -171,7 +171,7 @@ spec:
 - namespace는 단일 클러스터 내에서의 리소스 그룹 격리 메커니즘을 제공한다. 네임스페이스는 클러스터 자원을 여러 사용자 사이에서 나누는 방법이다.
   + 각 namespace에서는 CPU, memory, storage, kubernetes 오브젝트 등 모든 자원에 대한 limit을 설정할 수 있다.
 - 리소스의 이름은 namespace 내에서 유일해야 하며, 모든 namespace 내에서 유일할 필요는 없다.
-- Namespace 기반 오브젝트들(Deployment, Service 등)에는 naamespace를 적용할 수 있으나, cluster 범위의 오브젝트들(Storage class, nodes, PersistentVolumne 네임스페이스 기반 분류를 적용할 수 없다.
+- Namespace 기반 오브젝트들(Deployment, Service 등)에는 namespace를 적용할 수 있으나, cluster 범위의 오브젝트들(Storage class, nodes, PersistentVolumne 네임스페이스 기반 분류를 적용할 수 없다.
 
   ![](images/2021-12-15-13-10-11.png)
 
@@ -220,7 +220,7 @@ kube-system       Active   1d
 - 모든 kubectl config 명령어를 통해 기본 네임스페이스를 context에 영구적으로 저장할 수 있다.
   
   ```bash
-  kubectl config set-context --current --namespace=<inamespace_name>
+  kubectl config set-context --current --namespace=<namespace_name>
   ```
 
 ## Labels
