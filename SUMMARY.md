@@ -33,6 +33,7 @@
     * [Python SQLite3 모듈 사용하기](language/python/python-sqlite3-module.md)
   * [GoLang](language/golang/README.md)
     * [GoLang(Go언어) 온라인 학습 자료](language/golang/how-to-start-golang.md)
+    * [Go 데이터 타입, 변수와 상수](/language/golang/01_go-variable-constant.md)
 
 * [Data Structure/Algorithm](Algorithm/README.md)
   * [Big-O](algorithm/big-O.md)
