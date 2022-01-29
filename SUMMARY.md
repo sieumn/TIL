@@ -34,6 +34,8 @@
   * [GoLang](language/golang/README.md)
     * [GoLang(Go언어) 온라인 학습 자료](language/golang/how-to-start-golang.md)
     * [Go 데이터 타입, 변수와 상수](/language/golang/01_go-variable-constant.md)
+    * [Go 연산자, 조건문, 반복문](/language/golang/02_go-operator-and-iterator.md)
+    * [Go 함수](/language/golang/03_go-function.md)
 
 * [Data Structure/Algorithm](Algorithm/README.md)
   * [Big-O](algorithm/big-O.md)
